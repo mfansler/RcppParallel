@@ -1,0 +1,30 @@
+
+PKG_CPPFLAGS += -I../inst/include/
+
+UNAME := $(shell uname)
+
+ifeq ($(UNAME), Darwin)
+  USE_TBB=yes
+endif
+ifeq ($(UNAME), Linux)
+  USE_TBB=yes
+endif
+
+ifdef USE_TBB
+
+.PHONY: all tbb
+
+all: $(SHLIB) tbb
+
+tbb:
+	mkdir -p ../inst/lib
+	(cd tbb/src; make tbb_release tbb_build_prefix=lib)
+	cp tbb/build/lib_release/libtbb.* ../inst/lib
+
+clean:
+	(cd tbb/src; make clean)
+
+endif
+
+
+
