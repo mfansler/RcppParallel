@@ -1,8 +1,8 @@
-eb9476ca1408046efb98acdf6f58b688 *DESCRIPTION
+6304fbad14de65a5cf7f5269a84520c7 *DESCRIPTION
 e49f750dfa2a5be28d49a7fa7b215bf4 *NAMESPACE
 6274b3ba377a089e1cb07c337e371ec2 *NEWS
-a1fc565772a7c4cf29ceb5fdbc6e0264 *R/options.R
-8c95f1b11a733f08d5e91d3d3ab66f92 *README.md
+21283daa4d44c9da3e10b629a90b1f35 *R/options.R
+13d88ca7ef614082fb8292cf01ac843b *README.md
 d5e3f68646300f0f7445ad858a2127f3 *inst/include/RcppParallel.h
 565df1e5d841a44945867c15c102488e *inst/include/RcppParallel/Common.h
 c3580014f0ccf1c64a1ae4e773e28ebb *inst/include/RcppParallel/RMatrix.h
@@ -111,8 +111,8 @@ bb4edcf03af4d1f5088cdb04d5c622bb *inst/include/tthread/tinythread.h
 9d61a54db6779348e55e3725a8782ea4 *inst/include/tthread/tinythread.inl
 d0cb958934e2d994b4802e0621f6a6b2 *man/RcppParallel-package.Rd
 ad93e519baac45a6520a29eb27a51655 *man/setThreadOptions.Rd
-91908924dfe8358f7ef2f091ebd9c9a0 *src/Makevars
-90ccd99df702c2c89f7d2d74837a0249 *src/Makevars.win
+a8b921d6062bb095a7f805a17a9a2b7b *src/Makevars
+9c81a5c9f1c4acd843b6f03c1d883057 *src/Makevars.win
 8e9739bd16811d4c2e0a1a1958ee387b *src/options.cpp
 b38119a9ad55c4707005df9d9e02a343 *src/tbb/CHANGES
 2c7f2caf277a3933e3acdf7f89d54cc1 *src/tbb/COPYING
