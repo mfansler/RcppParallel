@@ -1,8 +1,8 @@
 Package: RcppParallel
 Type: Package
 Title: Parallel Programming Tools for Rcpp
-Version: 4.3.4
-Date: 2015-04-04
+Version: 4.3.6
+Date: 2015-04-07
 Authors@R: c(
     person("JJ", "Allaire", role = c("aut", "cre"), email = "jj@rstudio.com"),
     person("Romain", "Francois", role = c("aut", "cph")),
@@ -19,12 +19,12 @@ Description: High level functions for doing parallel programming with Rcpp.
   a standard serial "for" loop into a parallel one and the parallelReduce 
   function can be used for accumulating aggregate or other values.
 Suggests: Rcpp, testthat
-SystemRequirements: GNU make
+SystemRequirements: GNU make, Windows: cmd.exe and cscript.exe
 License: GPL-2
 URL: http://rcppcore.github.io/RcppParallel,
         https://github.com/RcppCore/RcppParallel
 Collate: 'build.R' 'hooks.R' 'options.R'
-Packaged: 2015-03-06 20:46:09 UTC; jjallaire
+Packaged: 2015-03-09 18:27:26 UTC; jjallaire
 Author: JJ Allaire [aut, cre],
   Romain Francois [aut, cph],
   Gregory Vandenbrouck [aut],
@@ -37,4 +37,4 @@ Author: JJ Allaire [aut, cre],
 Maintainer: JJ Allaire <jj@rstudio.com>
 NeedsCompilation: yes
 Repository: CRAN
-Date/Publication: 2015-03-07 06:30:42
+Date/Publication: 2015-03-10 07:48:23

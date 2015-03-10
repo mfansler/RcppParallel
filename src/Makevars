@@ -1,7 +1,7 @@
 
 CXX_STD = CXX11
 
-PKG_CPPFLAGS += -I../inst/include/ -DRCPP_PARALLEL_USE_TBB=1
+PKG_CPPFLAGS += -I../inst/include/
 
 ifeq ($(OS), Windows_NT)
 
@@ -24,12 +24,13 @@ endif
 
 ifdef USE_TBB
 
-  MAKE_ARGS := CXXFLAGS=-DTBB_NO_LEGACY=1 tbb_release tbb_build_prefix=lib
+PKG_CPPFLAGS += -DRCPP_PARALLEL_USE_TBB=1
 
-  # What I really want is startswith but this doesn't appear to be available
-  ifneq (,$(findstring clang,$(CC)))
-    MAKE_ARGS += compiler=clang
+MAKE_ARGS := CXXFLAGS=-DTBB_NO_LEGACY=1 tbb_release tbb_build_prefix=lib
 
+# What I really want is startswith but this doesn't appear to be available
+ifneq (,$(findstring clang,$(CC)))
+  MAKE_ARGS += compiler=clang
 endif
 
 ifeq ($(USE_TBB),  Windows)

@@ -1,7 +1,7 @@
-90f4ef09e11df35ad3d0186a974f603d *DESCRIPTION
+64c4ab8bc492cfba8dfecfbfef370541 *DESCRIPTION
 6684f7af533cedbca1dda7f22759016b *NAMESPACE
-574fc74ab44405a8404a32db14c140bc *NEWS
-a1f14f6bcc5fc14cc939dbda06421a80 *R/build.R
+6cbdcd69d4021e58233cd22e183fa8c4 *NEWS
+6209c923b3302680a36fae48a116cb2b *R/build.R
 83138edf5caa198b88268f75e0064b44 *R/hooks.R
 cb7259a31eb853ae93044c43fb1cf101 *R/options.R
 eb763f5f18fed18a2970e35259a72c83 *README.md
@@ -30,7 +30,7 @@ bb0045cfc597fc7b7bafb3566e7d505b *inst/include/tbb/combinable.h
 9746fc15bb16fa04ac624fc4bc4a1575 *inst/include/tbb/concurrent_queue.h
 e2acce868ff5ececd022eb8c668f7bbb *inst/include/tbb/concurrent_unordered_map.h
 1fd2a3d6e2ea69fe00d705d9740c53c3 *inst/include/tbb/concurrent_unordered_set.h
-59e564dfe4a8bb9ce1265f0ca28a4023 *inst/include/tbb/concurrent_vector.h
+c92d9028de69a380b9cb5aedbab6305a *inst/include/tbb/concurrent_vector.h
 26bcce36fd8b3482eaab0d733d678520 *inst/include/tbb/critical_section.h
 239917ab88bd0ec733819cda5b470289 *inst/include/tbb/enumerable_thread_specific.h
 cc88aae25cf686f5682c7f0d78bf557a *inst/include/tbb/flow_graph.h
@@ -120,8 +120,8 @@ c2423aacc0fa4e2f520477749c96e7ad *inst/presentations/rcpp_parallel_talk_jan2015.
 a85e85238f06db0e654279fc6fa60427 *man/RcppParallel-package.Rd
 383a5f06b6ff0e8183c1779a6a8c499a *man/RcppParallelLibs.Rd
 f3b91a97f7f2c4cbe658b0858d74017e *man/setThreadOptions.Rd
-8b628cd39dbe1eab9dce8b8af98ba18b *src/Makevars
-13452c5ad3c85a5faae6483e9c4ca322 *src/options.cpp
+f9d3d17b9833b57bad14d131a78fa607 *src/Makevars
+32ee0b5805df0877ee7e81d97619ec96 *src/options.cpp
 226aad3e6ae47bda6bea91202848216b *src/tbb/CHANGES
 2c7f2caf277a3933e3acdf7f89d54cc1 *src/tbb/COPYING
 8a9765106bf7a6501003abc3b5850cd0 *src/tbb/Makefile
@@ -183,7 +183,7 @@ fe50a0837adfa4d28a4eb54330b5b89d *src/tbb/build/vs2010/index.html
 aeaa643fcb83517e92e762ed0b3b27fa *src/tbb/build/windows.cl.inc
 1749d820f760329bd1b76fcc6562cd40 *src/tbb/build/windows.gcc.inc
 56588cb3cca759312fad844b79846a95 *src/tbb/build/windows.icl.inc
-b1f30b0e803f45d9b264b89fd599d3e9 *src/tbb/build/windows.inc
+afc244fd609cbd6c7c35e1a8a0ac47b7 *src/tbb/build/windows.inc
 db4c2aeff8c80d7e311740d4aaefb8c8 *src/tbb/build/xbox360.cl.inc
 21969db22a32d041b47411282cd13bdf *src/tbb/build/xbox360.inc
 005136831e980c8640e9beee79f5f06c *src/tbb/include/index.html
@@ -207,7 +207,7 @@ bb0045cfc597fc7b7bafb3566e7d505b *src/tbb/include/tbb/combinable.h
 9746fc15bb16fa04ac624fc4bc4a1575 *src/tbb/include/tbb/concurrent_queue.h
 e2acce868ff5ececd022eb8c668f7bbb *src/tbb/include/tbb/concurrent_unordered_map.h
 1fd2a3d6e2ea69fe00d705d9740c53c3 *src/tbb/include/tbb/concurrent_unordered_set.h
-59e564dfe4a8bb9ce1265f0ca28a4023 *src/tbb/include/tbb/concurrent_vector.h
+c92d9028de69a380b9cb5aedbab6305a *src/tbb/include/tbb/concurrent_vector.h
 26bcce36fd8b3482eaab0d733d678520 *src/tbb/include/tbb/critical_section.h
 239917ab88bd0ec733819cda5b470289 *src/tbb/include/tbb/enumerable_thread_specific.h
 cc88aae25cf686f5682c7f0d78bf557a *src/tbb/include/tbb/flow_graph.h
@@ -616,11 +616,11 @@ c46281f7ecf8e5d5394e592cb4f1f800 *src/tbb/src/test/test_tbb_condition_variable.c
 3ee4ef65a4bcc4a569790a87eef01240 *src/tbb/src/test/test_write_once_node.cpp
 f547b9ff4294656aed8ec10f2949709f *src/tbb/src/test/test_yield.cpp
 00d073694ba5b403ea364b1374e388ba *tests/testthat.R
-c7e35f89b0b1ffb309920b6596b13d62 *tests/testthat/cpp/distance.cpp
+0bdc56b30a01a240a9f02afc6af76ea4 *tests/testthat/cpp/distance.cpp
 b9e5bbe1cadd17714288718fa225e49c *tests/testthat/cpp/innerproduct.cpp
 8ca3bc3f887c91b7dfd38ab0192b4bcc *tests/testthat/cpp/sum.cpp
-4b00b21da8acd051e50dd43e13f1f0c5 *tests/testthat/cpp/transform.cpp
+0007cf2add58b32b7cc3371b8c17c70b *tests/testthat/cpp/transform.cpp
 941d16c87e4e44ed3b4bfb57e4702feb *tests/testthat/test-distance.R
 e19798b9d3cdb2200cc9a301f8cb987b *tests/testthat/test-inner-product.R
 c29cc6c69613ad7024a42e7b7ec8eeab *tests/testthat/test-sum.R
-add17f30712bda0092f474c31c6a869d *tests/testthat/test-transform.R
+f2f637afa2da87126d894bfc90522578 *tests/testthat/test-transform.R
