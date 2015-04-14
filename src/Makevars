@@ -1,24 +1,27 @@
 
-CXX_STD = CXX11
-
 PKG_CPPFLAGS += -I../inst/include/
 
 ifeq ($(OS), Windows_NT)
 
   USE_TBB=Windows
-  TBB_COPY_PATTERN=tbb.dll
+  TBB_COPY_PATTERN=tbb*.dll
+  PKG_CPPFLAGS += -Wno-long-long
 
 else
   
   UNAME := $(shell uname)
-  TBB_COPY_PATTERN=libtbb.*
+  TBB_COPY_PATTERN=libtbb*.*
   ifeq ($(UNAME), Darwin)
     USE_TBB=Mac
   endif
   ifeq ($(UNAME), Linux)
     USE_TBB=Linux
   endif
-  # Note: regular MinGW not supported
+  ifeq ($(UNAME), SunOS)
+    USE_TBB=SunOS
+  else
+    PKG_CPPFLAGS += -Wno-long-long
+  endif
 
 endif
 
@@ -26,12 +29,7 @@ ifdef USE_TBB
 
 PKG_CPPFLAGS += -DRCPP_PARALLEL_USE_TBB=1
 
-MAKE_ARGS := CXXFLAGS=-DTBB_NO_LEGACY=1 tbb_release tbb_build_prefix=lib
-
-# What I really want is startswith but this doesn't appear to be available
-ifneq (,$(findstring clang,$(CC)))
-  MAKE_ARGS += compiler=clang
-endif
+MAKE_ARGS := CXXFLAGS=-DTBB_NO_LEGACY=1 tbb_release tbbmalloc_release tbb_build_prefix=lib
 
 ifeq ($(USE_TBB),  Windows)
 
@@ -48,8 +46,15 @@ ifeq ($(USE_TBB),  Windows)
 
   # Linker needs access to the tbb dll; otherwise you get errors such as:
   # "undefined reference to `tbb::task_scheduler_init::terminate()'"
-  PKG_LIBS += -L../inst/lib/$(ARCH_DIR) -ltbb
+  PKG_LIBS += -L../inst/lib/$(ARCH_DIR) -ltbb -ltbbmalloc
 
+endif
+
+ifeq ($(USE_TBB),  SunOS)
+   R_32BIT = $(shell ${R_HOME}/bin/Rscript -e 'cat(.Machine$$sizeof.pointer == 4)')
+   ifeq ($(R_32BIT), TRUE)
+      MAKE_ARGS += arch=ia32
+   endif
 endif
 
 .PHONY: all tbb
@@ -58,8 +63,14 @@ endif
 all: tbb $(SHLIB)
 
 tbb:
-	mkdir -p ../inst/lib/$(ARCH_DIR)
-	( cd tbb/src; make $(MAKE_ARGS) )
+	mkdir -p ../inst/lib/$(ARCH_DIR); \
+	cd tbb/src; \
+	if [[ "$(CC)" == clang* ]]; then \
+	   make compiler=clang $(MAKE_ARGS); \
+	else \
+	   make $(MAKE_ARGS); \
+	fi; \
+	cd ../..; \
 	cp tbb/build/lib_release/$(TBB_COPY_PATTERN) ../inst/lib/$(ARCH_DIR)
 
 clean:
