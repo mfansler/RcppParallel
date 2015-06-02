@@ -1,8 +1,8 @@
 Package: RcppParallel
 Type: Package
 Title: Parallel Programming Tools for Rcpp
-Version: 4.3.8
-Date: 2015-04-13
+Version: 4.3.14
+Date: 2015-05-26
 Authors@R: c(
     person("JJ", "Allaire", role = c("aut", "cre"), email = "jj@rstudio.com"),
     person("Romain", "Francois", role = c("aut", "cph")),
@@ -14,17 +14,19 @@ Authors@R: c(
        comment = "Intel TBB library, https://www.threadingbuildingblocks.org/"),
     person(family = "Microsoft", role = "cph")
     )
-Description: High level functions for doing parallel programming with Rcpp.
+Description: High level functions for doing parallel programming with 'Rcpp'.
   For example, the parallelFor() function can be used to convert the work of 
   a standard serial "for" loop into a parallel one and the parallelReduce() 
   function can be used for accumulating aggregate or other values.
-Suggests: Rcpp, testthat
-SystemRequirements: GNU make, Windows: cmd.exe and cscript.exe
+Suggests: Rcpp, RUnit
+SystemRequirements: GNU make, Windows: cmd.exe and cscript.exe,
+        Solaris: g++ is required
 License: GPL-2
 URL: http://rcppcore.github.io/RcppParallel,
         https://github.com/RcppCore/RcppParallel
 Collate: 'build.R' 'hooks.R' 'options.R'
-Packaged: 2015-04-13 17:26:12 UTC; jjallaire
+NeedsCompilation: yes
+Packaged: 2015-06-01 12:29:52 UTC; jjallaire
 Author: JJ Allaire [aut, cre],
   Romain Francois [aut, cph],
   Gregory Vandenbrouck [aut],
@@ -35,6 +37,5 @@ Author: JJ Allaire [aut, cre],
     https://www.threadingbuildingblocks.org/),
   Microsoft [cph]
 Maintainer: JJ Allaire <jj@rstudio.com>
-NeedsCompilation: yes
 Repository: CRAN
-Date/Publication: 2015-04-14 09:11:10
+Date/Publication: 2015-06-02 08:04:38

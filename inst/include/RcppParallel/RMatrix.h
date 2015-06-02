@@ -41,7 +41,7 @@ public:
          }
          
          inline row_iterator operator++(int) {
-            iterator tmp(*this); 
+            row_iterator tmp(*this); 
             operator++(); 
             return tmp;
          }
@@ -237,6 +237,14 @@ public:
    
    inline const Column column(std::size_t i) const {
       return Column(*const_cast<RMatrix*>(this), i);
+   }
+   
+   inline T& operator[](std::size_t i) {
+      return *(data_ + i);
+   }
+   
+   inline const T& operator[](std::size_t i) const {
+      return *(data_ + i);
    }
    
 private:

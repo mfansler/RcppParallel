@@ -28,10 +28,7 @@ inlineCxxPlugin <- function() {
 }
 
 tbbCxxFlags <- function() {
-   if (Sys.info()['sysname'] != "SunOS")
-      flags <- "-Wno-long-long"
-   else
-      flags <- ""
+   flags <- "$(CXX1XSTD)"
    if (Sys.info()['sysname'] == "Windows")
       flags <- paste(flags, "-DRCPP_PARALLEL_USE_TBB=1")
    flags
@@ -40,7 +37,7 @@ tbbCxxFlags <- function() {
 # Return the linker flags requried for TBB on this platform
 tbbLdFlags <- function() {
    # on Windows and Solaris we need to explicitly link against tbb.dll
-   if (Sys.info()['sysname'] %in% c("Windows", "SunOS")) {
+   if ((Sys.info()['sysname'] %in% c("Windows", "SunOS")) && !isSparc()) {
       tbb <- tbbLibPath()
       paste("-L", asBuildPath(dirname(tbb)), " -ltbb -ltbbmalloc", sep = "")
    } else {
@@ -57,7 +54,7 @@ tbbLibPath <- function(suffix = "") {
       "Windows" = paste("tbb", suffix, ".dll", sep = ""),
       "SunOS" = paste("libtbb", suffix, ".so", sep = "")
    )
-   if (sysname %in% names(tbbSupported)) {
+   if ((sysname %in% names(tbbSupported)) && !isSparc()) {
       libDir <- "lib/"
       if (sysname == "Windows")
          libDir <- paste(libDir, .Platform$r_arch, "/", sep="")
@@ -68,6 +65,9 @@ tbbLibPath <- function(suffix = "") {
    }
 }
 
+isSparc <- function() {
+   Sys.info()['sysname'] == "SunOS" && Sys.info()[["machine"]] != "i86pc"
+}
 
 # Helper function to ape the behavior of the R build system
 # when providing paths to libraries

@@ -1,11 +1,10 @@
 
-PKG_CPPFLAGS += -I../inst/include/
+PKG_CPPFLAGS += $(CXX1XSTD) -I../inst/include/ 
 
 ifeq ($(OS), Windows_NT)
 
   USE_TBB=Windows
   TBB_COPY_PATTERN=tbb*.dll
-  PKG_CPPFLAGS += -Wno-long-long
 
 else
   
@@ -18,9 +17,10 @@ else
     USE_TBB=Linux
   endif
   ifeq ($(UNAME), SunOS)
-    USE_TBB=SunOS
-  else
-    PKG_CPPFLAGS += -Wno-long-long
+    SUNOS_ARCH = $(shell uname -p)
+    ifeq ($(SUNOS_ARCH), i386)
+      USE_TBB=SunOS
+    endif
   endif
 
 endif
@@ -50,6 +50,7 @@ ifeq ($(USE_TBB),  Windows)
 
 endif
 
+# For Solaris detect if this is 32-bit R on x86 and if so forward that to TBB
 ifeq ($(USE_TBB),  SunOS)
    R_32BIT = $(shell ${R_HOME}/bin/Rscript -e 'cat(.Machine$$sizeof.pointer == 4)')
    ifeq ($(R_32BIT), TRUE)
@@ -66,9 +67,11 @@ tbb:
 	mkdir -p ../inst/lib/$(ARCH_DIR); \
 	cd tbb/src; \
 	if [[ "$(CC)" == clang* ]]; then \
-	   make compiler=clang $(MAKE_ARGS); \
+	   $(MAKE) cpp0x=1 compiler=clang $(MAKE_ARGS); \
+	elif [[ "$(CC)" == *gcc* ]]; then \
+	   $(MAKE) cpp0x=1 compiler=gcc $(MAKE_ARGS); \
 	else \
-	   make $(MAKE_ARGS); \
+	   $(MAKE) cpp0x=1 $(MAKE_ARGS); \
 	fi; \
 	cd ../..; \
 	cp tbb/build/lib_release/$(TBB_COPY_PATTERN) ../inst/lib/$(ARCH_DIR)
