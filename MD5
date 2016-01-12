@@ -1,9 +1,9 @@
-a8d44b9dc59bd38005f95f135c96a9ee *DESCRIPTION
+b2c6f4c9425d4975f3e4f0fcd9665273 *DESCRIPTION
 6684f7af533cedbca1dda7f22759016b *NAMESPACE
-8540d8abf69bb6f79db6b1999d4d8dea *NEWS
 d68de76ac3034457a9275f580f5c41ba *R/build.R
 2cd3bdbbfa4aa54c45e9413b93b1d1b6 *R/hooks.R
 cb7259a31eb853ae93044c43fb1cf101 *R/options.R
+e89153e4f767f8d3efb6c16896362e00 *inst/NEWS
 5ff513fb33023d45231d644c6cd9e7ba *inst/include/RcppParallel.h
 565df1e5d841a44945867c15c102488e *inst/include/RcppParallel/Common.h
 713b5bf399a131309eadefd0d0924dd2 *inst/include/RcppParallel/RMatrix.h
@@ -129,7 +129,7 @@ bcb7cccabfbd3e3f24834d40d1f014a0 *inst/tests/runit.transform.R
 cee8e00decc99c13c084f3af8256c9df *man/RcppParallel-package.Rd
 383a5f06b6ff0e8183c1779a6a8c499a *man/RcppParallelLibs.Rd
 f3b91a97f7f2c4cbe658b0858d74017e *man/setThreadOptions.Rd
-fed51f492bd2b069aeaf71e2fad07464 *src/Makevars
+f058fb703b049c996e079f56328b2da1 *src/Makevars
 32ee0b5805df0877ee7e81d97619ec96 *src/options.cpp
 226aad3e6ae47bda6bea91202848216b *src/tbb/CHANGES
 2c7f2caf277a3933e3acdf7f89d54cc1 *src/tbb/COPYING
