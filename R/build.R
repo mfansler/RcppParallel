@@ -1,19 +1,32 @@
 
 
-# Output the LD flags for building against TBB. These flags are propagated
-# to sourceCpp via the inlineCxxPlugin (defined below) and to packages 
-# via a line in Makevars.win like this:
+# Output the CXX flags. These flags are propagated to sourceCpp via the 
+# inlineCxxPlugin (defined below) and to packages via a line in Makevars[.win]
+# like this:
 #
-#   PKG_LIBS += $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "RcppParallel::LdFlags()")
+#  PKG_CXXFLAGS += $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "RcppParallel::CxxFlags()")
 #
-# Note that this is only required for Windows builds (on Linux and OS X no 
-# explicit link to TBB is required).
-RcppParallelLibs <- function() {
-   cat(tbbLdFlags())
+CxxFlags <- function() {
+   cat(tbbCxxFlags())
 }
 
 
-# Inline plugin used by sourceCpp to link to the TBB library
+# Output the LD flags for building against TBB. These flags are propagated
+# to sourceCpp via the inlineCxxPlugin (defined below) and to packages 
+# via a line in Makevars[.win] like this:
+#
+#   PKG_LIBS += $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "RcppParallel::LdFlags()")
+#
+LdFlags <- function() {
+   cat(tbbLdFlags())
+}
+
+# alias for backward compatibility
+RcppParallelLibs <- function() {
+   LdFlags()
+}
+
+# Inline plugin used by sourceCpp.
 inlineCxxPlugin <- function() {
    list(
       env = list(
@@ -22,15 +35,19 @@ inlineCxxPlugin <- function() {
       ),
       includes = "#include <RcppParallel.h>",
       LinkingTo = "RcppParallel",
-      body = function( x ) x,
+      body = function(x) x,
       Depends = "RcppParallel"
    )
 }
 
 tbbCxxFlags <- function() {
-   flags <- "$(CXX1XSTD)"
+   
+   flags <- c()
+   
+   # opt-in to TBB on Windows
    if (Sys.info()['sysname'] == "Windows")
       flags <- paste(flags, "-DRCPP_PARALLEL_USE_TBB=1")
+   
    flags
 }
 
