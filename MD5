@@ -1,4 +1,4 @@
-43002986ff78249650380158a7472b4b *DESCRIPTION
+b1beb2ad05a2df30318740532a86934f *DESCRIPTION
 41a7ed7fb7d5974429d3047e3f9c0b91 *NAMESPACE
 5a1495bf7a04c7ba544b8d4c4c002d79 *R/build.R
 2cd3bdbbfa4aa54c45e9413b93b1d1b6 *R/hooks.R
@@ -430,7 +430,7 @@ a7b83c8cd87ea81916d706ef5da4d7d6 *src/tbb/src/tbb/tools_api/disable_warnings.h
 62d286b9bb60448332c6b973c931fcf7 *src/tbb/src/tbb/tools_api/internal/ittnotify.h
 a0dd019d1235fdbf11ae841e38c54b08 *src/tbb/src/tbb/tools_api/ittnotify.h
 f9dac2d31ef8ef2896f649a06eb267fe *src/tbb/src/tbb/tools_api/ittnotify_config.h
-12839a6ac05307f629cf4cc30f9f6901 *src/tbb/src/tbb/tools_api/ittnotify_static.c
+0e750e3bf4ad05fb563e14a3dffcefda *src/tbb/src/tbb/tools_api/ittnotify_static.c
 fb16cc94501da82680c7ab4814279cc1 *src/tbb/src/tbb/tools_api/ittnotify_static.h
 87d2ef0df08bd91a4d296fe9e3d3c6b1 *src/tbb/src/tbb/tools_api/ittnotify_types.h
 3962d91745b0004d4938338d22ddb7b4 *src/tbb/src/tbb/tools_api/legacy/ittnotify.h
