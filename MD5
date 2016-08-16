@@ -1,4 +1,4 @@
-b1beb2ad05a2df30318740532a86934f *DESCRIPTION
+ae0c98afd0b54b3098d717288abc047d *DESCRIPTION
 41a7ed7fb7d5974429d3047e3f9c0b91 *NAMESPACE
 5a1495bf7a04c7ba544b8d4c4c002d79 *R/build.R
 2cd3bdbbfa4aa54c45e9413b93b1d1b6 *R/hooks.R
@@ -100,7 +100,7 @@ a5baa65ee2a950adbc9d8e201f948a51 *inst/include/tbb/task_group.h
 46723ab24b31df5e871327d094af1b1e *inst/include/tbb/task_scheduler_observer.h
 309e8fbeebd40337806730c086a2017e *inst/include/tbb/tbb.h
 ca31fa9bead565574564eecd3f0b8f9d *inst/include/tbb/tbb_allocator.h
-db99477714d307967cf4ea45ab39d153 *inst/include/tbb/tbb_config.h
+decd49dbcc4ab1b3262e4fc86bf984e6 *inst/include/tbb/tbb_config.h
 dbda43226adef6442ac871b722db379a *inst/include/tbb/tbb_exception.h
 31baab79661a732ea6c81bc39577a622 *inst/include/tbb/tbb_machine.h
 bef5e2a262f8f58998ee6d21d23d76f9 *inst/include/tbb/tbb_profiling.h
@@ -127,7 +127,7 @@ bcb7cccabfbd3e3f24834d40d1f014a0 *inst/tests/runit.transform.R
 cee8e00decc99c13c084f3af8256c9df *man/RcppParallel-package.Rd
 ede5dd7c3ef93a2587b0a8bb6e07e99b *man/RcppParallelFlags.Rd
 f3b91a97f7f2c4cbe658b0858d74017e *man/setThreadOptions.Rd
-d2d755fa825e45d2ee551b52641b2bf0 *src/Makevars
+c65ca702617c9e0e034ca6d16e7ca467 *src/Makevars
 32ee0b5805df0877ee7e81d97619ec96 *src/options.cpp
 226aad3e6ae47bda6bea91202848216b *src/tbb/CHANGES
 2c7f2caf277a3933e3acdf7f89d54cc1 *src/tbb/COPYING
@@ -285,7 +285,7 @@ a5baa65ee2a950adbc9d8e201f948a51 *src/tbb/include/tbb/task_group.h
 46723ab24b31df5e871327d094af1b1e *src/tbb/include/tbb/task_scheduler_observer.h
 309e8fbeebd40337806730c086a2017e *src/tbb/include/tbb/tbb.h
 ca31fa9bead565574564eecd3f0b8f9d *src/tbb/include/tbb/tbb_allocator.h
-db99477714d307967cf4ea45ab39d153 *src/tbb/include/tbb/tbb_config.h
+decd49dbcc4ab1b3262e4fc86bf984e6 *src/tbb/include/tbb/tbb_config.h
 dbda43226adef6442ac871b722db379a *src/tbb/include/tbb/tbb_exception.h
 31baab79661a732ea6c81bc39577a622 *src/tbb/include/tbb/tbb_machine.h
 bef5e2a262f8f58998ee6d21d23d76f9 *src/tbb/include/tbb/tbb_profiling.h
