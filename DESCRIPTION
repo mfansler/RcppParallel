@@ -1,7 +1,7 @@
 Package: RcppParallel
 Type: Package
 Title: Parallel Programming Tools for 'Rcpp'
-Version: 4.3.20.1
+Version: 4.3.20.2
 Authors@R: c(
     person("JJ", "Allaire", role = c("aut"), email = "jj@rstudio.com"),
     person("Romain", "Francois", role = c("aut", "cph")),
@@ -28,7 +28,7 @@ URL: http://rcppcore.github.io/RcppParallel,
         https://github.com/RcppCore/RcppParallel
 Collate: 'build.R' 'hooks.R' 'options.R'
 NeedsCompilation: yes
-Packaged: 2018-02-14 09:12:23 UTC; ripley
+Packaged: 2018-02-14 14:35:00 UTC; ripley
 Author: JJ Allaire [aut],
   Romain Francois [aut, cph],
   Kevin Ushey [aut, cre],
@@ -41,7 +41,7 @@ Author: JJ Allaire [aut],
   Microsoft [cph]
 Maintainer: ORPHANED
 Repository: CRAN
-Date/Publication: 2018-02-14 09:34:05 UTC
+Date/Publication: 2018-02-14 14:36:53 UTC
 X-CRAN-Original-Maintainer: Kevin Ushey <kevin@rstudio.com>
 X-CRAN-Comment: Orphaned and corrected on 2018-02-14 as check errors
         were not corrected despite reminders.

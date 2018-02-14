@@ -1,7 +1,7 @@
-# Calls to 'firstword' are used to strip out
-# a possible '-m64' attached to the CC variable
+# Calls to 'firstword' are used to strip out a possible '-m64' attached to the
+# CC variable
 # (or other compiler arguments)
-PKG_CPPFLAGS += $(CXX1XSTD) -I../inst/include/
+PKG_CXXFLAGS += $(CXX1XSTD) -I../inst/include/
 
 ifeq ($(OS), Windows_NT)
 
@@ -36,7 +36,7 @@ ifdef USE_TBB
 
 PKG_CPPFLAGS += -DRCPP_PARALLEL_USE_TBB=1
 
-MAKE_ARGS := CXXFLAGS=-DTBB_NO_LEGACY=1 PIC_KEY=$(CXXPICFLAGS) tbb_release tbbmalloc_release tbb_build_prefix=lib
+MAKE_ARGS := CXXFLAGS=-DTBB_NO_LEGACY=1 tbb_release tbbmalloc_release tbb_build_prefix=lib
 
 ifeq ($(USE_TBB),  Windows)
 

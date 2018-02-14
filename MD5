@@ -1,4 +1,4 @@
-533a80d8f56bfe23a251bb4916a28011 *DESCRIPTION
+03768770c2b071c8d563abb8d6cc59d0 *DESCRIPTION
 41a7ed7fb7d5974429d3047e3f9c0b91 *NAMESPACE
 5a1495bf7a04c7ba544b8d4c4c002d79 *R/build.R
 2cd3bdbbfa4aa54c45e9413b93b1d1b6 *R/hooks.R
@@ -127,7 +127,7 @@ bcb7cccabfbd3e3f24834d40d1f014a0 *inst/tests/runit.transform.R
 cee8e00decc99c13c084f3af8256c9df *man/RcppParallel-package.Rd
 ede5dd7c3ef93a2587b0a8bb6e07e99b *man/RcppParallelFlags.Rd
 f3b91a97f7f2c4cbe658b0858d74017e *man/setThreadOptions.Rd
-85b68e386cb721e1c17099922c48a701 *src/Makevars
+d16381bf45099893174e7a96c15167f4 *src/Makevars
 6a1fae13d63b3792de7e92d947987b78 *src/init.c
 32ee0b5805df0877ee7e81d97619ec96 *src/options.cpp
 226aad3e6ae47bda6bea91202848216b *src/tbb/CHANGES
