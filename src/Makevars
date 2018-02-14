@@ -36,7 +36,7 @@ ifdef USE_TBB
 
 PKG_CPPFLAGS += -DRCPP_PARALLEL_USE_TBB=1
 
-MAKE_ARGS := CXXFLAGS=-DTBB_NO_LEGACY=1 tbb_release tbbmalloc_release tbb_build_prefix=lib
+MAKE_ARGS := CXXFLAGS=-DTBB_NO_LEGACY=1 PIC_KEY=$(CXXPICFLAGS) tbb_release tbbmalloc_release tbb_build_prefix=lib
 
 ifeq ($(USE_TBB),  Windows)
 

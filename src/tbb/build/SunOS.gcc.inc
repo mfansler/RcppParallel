@@ -26,7 +26,7 @@ PIC_KEY = -fPIC
 WARNING_AS_ERROR_KEY = -Werror
 WARNING_KEY = -Wall
 TEST_WARNING_KEY = -Wshadow -Wcast-qual -Woverloaded-virtual -Wnon-virtual-dtor $(if $(findstring cc4., $(runtime)),-Wextra)
-WARNING_SUPPRESS = -Wno-parentheses -Wno-non-virtual-dtor
+##WARNING_SUPPRESS = -Wno-parentheses -Wno-non-virtual-dtor
 DYLIB_KEY = -shared
 LIBDL = -ldl
 

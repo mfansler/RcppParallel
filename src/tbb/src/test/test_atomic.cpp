@@ -47,7 +47,7 @@ using std::memcmp;
 #endif
 
 #if __TBB_GCC_STRICT_ALIASING_BROKEN
-    #pragma GCC diagnostic ignored "-Wstrict-aliasing"
+//    #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif
 
 // Intel(R) Compiler have an issue when a scoped enum with a specified underlying type has negative values.

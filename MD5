@@ -1,4 +1,4 @@
-ae0c98afd0b54b3098d717288abc047d *DESCRIPTION
+533a80d8f56bfe23a251bb4916a28011 *DESCRIPTION
 41a7ed7fb7d5974429d3047e3f9c0b91 *NAMESPACE
 5a1495bf7a04c7ba544b8d4c4c002d79 *R/build.R
 2cd3bdbbfa4aa54c45e9413b93b1d1b6 *R/hooks.R
@@ -127,7 +127,8 @@ bcb7cccabfbd3e3f24834d40d1f014a0 *inst/tests/runit.transform.R
 cee8e00decc99c13c084f3af8256c9df *man/RcppParallel-package.Rd
 ede5dd7c3ef93a2587b0a8bb6e07e99b *man/RcppParallelFlags.Rd
 f3b91a97f7f2c4cbe658b0858d74017e *man/setThreadOptions.Rd
-c65ca702617c9e0e034ca6d16e7ca467 *src/Makevars
+85b68e386cb721e1c17099922c48a701 *src/Makevars
+6a1fae13d63b3792de7e92d947987b78 *src/init.c
 32ee0b5805df0877ee7e81d97619ec96 *src/options.cpp
 226aad3e6ae47bda6bea91202848216b *src/tbb/CHANGES
 2c7f2caf277a3933e3acdf7f89d54cc1 *src/tbb/COPYING
@@ -142,7 +143,7 @@ cb6fd91372d9154c52266a4bc98a28f2 *src/tbb/build/Makefile.tbb
 f00c941b26fa1f466e91ee7ca54197e4 *src/tbb/build/Makefile.tbbmalloc
 79896545343a7ce6bb7add6ec6f65c8f *src/tbb/build/Makefile.tbbproxy
 fa7632aae52cdf144360aab2f6985365 *src/tbb/build/Makefile.test
-0d2e839edcfb24f7f6d5dd20f385aeac *src/tbb/build/SunOS.gcc.inc
+22d9cb610255fee71c92919210c61f9e *src/tbb/build/SunOS.gcc.inc
 f633318c7b675ef80601605d132cf43a *src/tbb/build/SunOS.inc
 49f2181805d6d9f12f4835de8a34ae97 *src/tbb/build/SunOS.suncc.inc
 cfb30ff17852c3a17d5dba8117128de6 *src/tbb/build/android.gcc.inc
@@ -159,8 +160,8 @@ cfb30ff17852c3a17d5dba8117128de6 *src/tbb/build/android.gcc.inc
 7bc0f0bf5d7f973ba16ccc0f2f637191 *src/tbb/build/generate_tbbvars.bat
 a94d41399b351b99a1a49c559cb90c31 *src/tbb/build/generate_tbbvars.sh
 72ce6113d3d9f87897cec752f79be7c0 *src/tbb/build/index.html
-303a549d33e9d9b2d71a8b76ef6fe42c *src/tbb/build/linux.clang.inc
-06c4a03ec30eeaa4a9cfe1891fc09c5a *src/tbb/build/linux.gcc.inc
+6161ec2eb3704ce36c2caa64c920593a *src/tbb/build/linux.clang.inc
+0b4ecb64b4c4efaf963253984f607417 *src/tbb/build/linux.gcc.inc
 43a9993a5e93972cc44df85a13b34485 *src/tbb/build/linux.icc.inc
 13de26a9e3761222ff6d95a27bba3d89 *src/tbb/build/linux.inc
 841e1a1f5df74991ac63de5ddb536f3e *src/tbb/build/linux.xl.inc
@@ -188,7 +189,7 @@ fe50a0837adfa4d28a4eb54330b5b89d *src/tbb/build/vs2010/index.html
 3958791e4af00d096c9d6a11a891da08 *src/tbb/build/vs2010/tbbmalloc_proxy.vcxproj
 05383b27de90238f9e901658c1812a81 *src/tbb/build/vs2010/version_string.ver
 aeaa643fcb83517e92e762ed0b3b27fa *src/tbb/build/windows.cl.inc
-818ec998d400f298e2fdf1d25f07f3bb *src/tbb/build/windows.gcc.inc
+6025edf11669c0b7cff69215817c2f7b *src/tbb/build/windows.gcc.inc
 56588cb3cca759312fad844b79846a95 *src/tbb/build/windows.icl.inc
 afc244fd609cbd6c7c35e1a8a0ac47b7 *src/tbb/build/windows.inc
 db4c2aeff8c80d7e311740d4aaefb8c8 *src/tbb/build/xbox360.cl.inc
@@ -505,11 +506,11 @@ e5cc7d3d2c9457a39a0d39537933b0e5 *src/tbb/src/test/harness_tsx.h
 b8dbce27079cc51d84d9f8b0eb5c75aa *src/tbb/src/test/test_ScalableAllocator.cpp
 6acffe09eca5623a735c05cfa4d811b6 *src/tbb/src/test/test_ScalableAllocator_STL.cpp
 d0b667f8a17be073756767d088340b57 *src/tbb/src/test/test_aggregator.cpp
-602f0bdb08aea9f852a6574265c0525b *src/tbb/src/test/test_aligned_space.cpp
+198c050d2b4b43ed3bb45643ac0b56de *src/tbb/src/test/test_aligned_space.cpp
 682e35e51a3dbeb4b5979d8d06d8303f *src/tbb/src/test/test_allocator.h
 4a035f86f105287c32f5d33152850156 *src/tbb/src/test/test_allocator_STL.h
 06e91859e3abd3d98354ac1f0e233035 *src/tbb/src/test/test_assembly.cpp
-789a7ace46c2c05f2e4809a2f0a02ab9 *src/tbb/src/test/test_atomic.cpp
+1d0c036a47844d9c9981b83ea19e2dd4 *src/tbb/src/test/test_atomic.cpp
 f1897d23b637d3a810467b612f94fe71 *src/tbb/src/test/test_blocked_range.cpp
 aa80097a75099a1a3a7a5e74b7ddf07a *src/tbb/src/test/test_blocked_range2d.cpp
 53ce2d2f8386556eebe270a7db16558c *src/tbb/src/test/test_blocked_range3d.cpp
@@ -520,7 +521,7 @@ cfc8e9d66dcfa057343c594cd915320a *src/tbb/src/test/test_cache_aligned_allocator_
 562970476ce5ad26ad2aeb4ad59da0e3 *src/tbb/src/test/test_cilk_common.h
 b486a844f28e2441ec3dba757386924f *src/tbb/src/test/test_cilk_dynamic_load.cpp
 9b4ce2008cd0bbd4793c71a717e423f7 *src/tbb/src/test/test_cilk_interop.cpp
-cc46a3849307cf08d122a50de8fde849 *src/tbb/src/test/test_combinable.cpp
+52ad00aad5ff245da0dcc2eb96c2a58f *src/tbb/src/test/test_combinable.cpp
 5a2c2b7c7451646ef91ab2e30587b9ef *src/tbb/src/test/test_concurrent_hash_map.cpp
 e765548de6f69200aaa4ba6dfcd1d144 *src/tbb/src/test/test_concurrent_lru_cache.cpp
 e252234bc062acd3662eec958c931bce *src/tbb/src/test/test_concurrent_monitor.cpp
@@ -540,7 +541,7 @@ eae92847a1700f083d2568836e88676f *src/tbb/src/test/test_critical_section.cpp
 453c95d07a96d3e71733e1692c1ff413 *src/tbb/src/test/test_eh_algorithms.cpp
 7d4fcbb8d970ceb3c628db6e0654a7b8 *src/tbb/src/test/test_eh_flow_graph.cpp
 493cbb4cf07f9f4b0d5e5ea7efc3c6a1 *src/tbb/src/test/test_eh_tasks.cpp
-2b1d6c4c9e3ab79eef9d0b65751162da *src/tbb/src/test/test_enumerable_thread_specific.cpp
+584ccd588f5b04f3bd21560c6dca5724 *src/tbb/src/test/test_enumerable_thread_specific.cpp
 a2079c9317f4542b29dbe446dc3172b0 *src/tbb/src/test/test_examples_common_utility.cpp
 823b124cadf66608eb14c121a5a1e439 *src/tbb/src/test/test_fast_random.cpp
 2e1bc74b0d62face233ee6dc6274afac *src/tbb/src/test/test_flow_graph.cpp
@@ -600,7 +601,7 @@ fadcf03235a11d104e0670fd2f573106 *src/tbb/src/test/test_rwm_upgrade_downgrade.cp
 d18248f262bf9eb6b39f2971bf597224 *src/tbb/src/test/test_split_node.cpp
 b4181f9b9a305f31107d0344d8e80e6a *src/tbb/src/test/test_static_assert.cpp
 cda243af48122683f9dc8e0bc8b1e44f *src/tbb/src/test/test_std_thread.cpp
-7c314deab579bac657729e4f7da755c6 *src/tbb/src/test/test_tagged_msg.cpp
+908a27bea2e56411f89aaf894594a7bc *src/tbb/src/test/test_tagged_msg.cpp
 9f12be169537b8350fa99d736120a5fb *src/tbb/src/test/test_task.cpp
 bd98c6eaad7b554ef8db072579e4a761 *src/tbb/src/test/test_task_arena.cpp
 0094d664f8d9f5665240dae6270de6ab *src/tbb/src/test/test_task_assertions.cpp
@@ -608,7 +609,7 @@ bd98c6eaad7b554ef8db072579e4a761 *src/tbb/src/test/test_task_arena.cpp
 7960ff7dc883cd73cef0fc0765d85514 *src/tbb/src/test/test_task_enqueue.cpp
 84b8786cfc8cdde47452911dc422f95b *src/tbb/src/test/test_task_group.cpp
 c58e22af88b635420d0862c6901b1878 *src/tbb/src/test/test_task_leaks.cpp
-b738235c941a72f9f8714e0d68b027df *src/tbb/src/test/test_task_priority.cpp
+ebbb41ddcc4e42256b6b3b537c7db051 *src/tbb/src/test/test_task_priority.cpp
 7f12d15b0d8777c2f4956c1b7144e0b1 *src/tbb/src/test/test_task_scheduler_init.cpp
 3c4eaf6f95908aff1df3de3fc0936adc *src/tbb/src/test/test_task_scheduler_observer.cpp
 ebf3e463ea8d01179590106e3640deb8 *src/tbb/src/test/test_task_steal_limit.cpp
