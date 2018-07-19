@@ -1,4 +1,4 @@
-dc342eacfe69247021494e3923871645 *DESCRIPTION
+b79001ee945936bb698bed00824d4e8c *DESCRIPTION
 50d75b4d42421eb8dc927070d5b190d4 *NAMESPACE
 5a1495bf7a04c7ba544b8d4c4c002d79 *R/build.R
 1c89f724d1263d253689bb19202fc187 *R/hooks.R
@@ -8,7 +8,7 @@ f3c8333a266e6ecbb35fd2f771752623 *cleanup
 b655b8ee83719d6f623567248466e2d4 *cleanup.win
 9c093ebf76b8b7766eb2feb5faad7b36 *configure
 b481df59119f55840bf861e8e1c1a9f9 *configure.win
-cf9a40c5cf173789f21c614d3813e619 *inst/NEWS
+25774b79ac4f73d87ba7694058329181 *inst/NEWS
 5ff513fb33023d45231d644c6cd9e7ba *inst/include/RcppParallel.h
 d4ab7ad2384f150a32637a284e831bc0 *inst/include/RcppParallel/Common.h
 75fa2c96d275d243b6bee4b3dcd788cd *inst/include/RcppParallel/RMatrix.h
@@ -29,7 +29,7 @@ c0a79121302a0d5e46f9351fcc2a8ffd *inst/include/tbb/compat/condition_variable
 af10ece5a58df1dfc39bcd6a9e1dbdd7 *inst/include/tbb/compat/ppl.h
 a3670113bb7b44a3536fc068b1934f79 *inst/include/tbb/compat/thread
 4227b06d564f5d86009245523891a43f *inst/include/tbb/compat/tuple
-d6dfb1b19d8cf24a7841f1113cefe945 *inst/include/tbb/concurrent_hash_map.h
+af4e9e89cf1ccc469409941af082e54e *inst/include/tbb/concurrent_hash_map.h
 0d497d4397dd898c9a65ed4807a9ce70 *inst/include/tbb/concurrent_lru_cache.h
 9c15d2467f4606b55d82c58c5a0eff2d *inst/include/tbb/concurrent_priority_queue.h
 2ad30e4107d1db6b3c638f60c1d96b03 *inst/include/tbb/concurrent_queue.h
@@ -149,7 +149,7 @@ cee8e00decc99c13c084f3af8256c9df *man/RcppParallel-package.Rd
 cf21b0e90c8e12da67f81db0f9e3edad *man/RcppParallel.package.skeleton.Rd
 5b33e213c19d4da27cf4f401a2020518 *man/RcppParallelFlags.Rd
 f3b91a97f7f2c4cbe658b0858d74017e *man/setThreadOptions.Rd
-bd7e5eb9cddf5b5ff76ed72f5184a50c *src/Makevars.in
+03072a438e92a0b8d335e8a6240bb295 *src/Makevars.in
 577ff72d88540ba48b61c11fe1d0cb3c *src/init.cpp
 32ee0b5805df0877ee7e81d97619ec96 *src/options.cpp
 ab34a7f2db75a1b1ad2eeddeefd330ce *src/tbb/CHANGES
@@ -209,7 +209,7 @@ b33b541a62b27a1c81808544ba9c3d54 *src/tbb/build/suncc.map.pause
 0c3b37c56497b8957c7d2944e4da44fb *src/tbb/build/version_info_linux.sh
 316bfc4aa0a9cccf6bcfed74a1cafdc5 *src/tbb/build/version_info_macos.sh
 62474173ade77de54d94a0a2844aac78 *src/tbb/build/version_info_sunos.sh
-a82c0a46d03d1cec8ba461388214494b *src/tbb/build/version_info_windows.js
+f8247c97c2ecbf58536e6e4aff904ee2 *src/tbb/build/version_info_windows.js
 525584e853b6eb101d2879bd6427410f *src/tbb/build/vs2013/index.html
 443c582d39f0d84a460595f8e1853068 *src/tbb/build/vs2013/makefile.sln
 228464d446a14ee30a370620ee51b65b *src/tbb/build/vs2013/tbb.vcxproj
@@ -217,9 +217,9 @@ a82c0a46d03d1cec8ba461388214494b *src/tbb/build/version_info_windows.js
 26fd56fea8591f7653771ec1f015ca4e *src/tbb/build/vs2013/tbbmalloc_proxy.vcxproj
 05383b27de90238f9e901658c1812a81 *src/tbb/build/vs2013/version_string.ver
 b59924ca71fcbd1043f40334227b93b9 *src/tbb/build/windows.cl.inc
-1c6b645e90300056b809e1e2b7b039c6 *src/tbb/build/windows.gcc.inc
+a233345a54f6f6396a97b2968d5d42b2 *src/tbb/build/windows.gcc.inc
 7ee8d7b31d57eb476bb5179079fe6086 *src/tbb/build/windows.icl.inc
-c6a2af6e999366b4a463884277064141 *src/tbb/build/windows.inc
+dda1ef69f72e1950f857e2fc85a53666 *src/tbb/build/windows.inc
 719fca47bf2eb469426db8b3dd0d1b9b *src/tbb/include/index.html
 7fedae3af7bb81b25e0f2978f758395e *src/tbb/include/serial/tbb/parallel_for.h
 9155bd2dece2303d826feb03ecebf951 *src/tbb/include/serial/tbb/tbb_annotate.h
@@ -235,7 +235,7 @@ c0a79121302a0d5e46f9351fcc2a8ffd *src/tbb/include/tbb/compat/condition_variable
 af10ece5a58df1dfc39bcd6a9e1dbdd7 *src/tbb/include/tbb/compat/ppl.h
 a3670113bb7b44a3536fc068b1934f79 *src/tbb/include/tbb/compat/thread
 4227b06d564f5d86009245523891a43f *src/tbb/include/tbb/compat/tuple
-74d235f9d20b6752ea9365350275b0fe *src/tbb/include/tbb/concurrent_hash_map.h
+214dab6c7554935ff57fb27a6f150801 *src/tbb/include/tbb/concurrent_hash_map.h
 947c4beac3ef70bdd397c5dd9f8f20f8 *src/tbb/include/tbb/concurrent_lru_cache.h
 9c15d2467f4606b55d82c58c5a0eff2d *src/tbb/include/tbb/concurrent_priority_queue.h
 2ad30e4107d1db6b3c638f60c1d96b03 *src/tbb/include/tbb/concurrent_queue.h
@@ -396,12 +396,12 @@ e283d916ab5d813851f807304affbd15 *src/tbb/src/tbb/arena.cpp
 8a17cb6a297993d4c5f11587cc661657 *src/tbb/src/tbb/concurrent_hash_map.cpp
 5e972e6b566545b14654b4d667a7dcaf *src/tbb/src/tbb/concurrent_monitor.cpp
 24bf984dae14e3fcb50d0d3aa738e1dd *src/tbb/src/tbb/concurrent_monitor.h
-11948781d318bd627c646ae00862789f *src/tbb/src/tbb/concurrent_queue.cpp
+a6847dca829f0511042127ac665b1d88 *src/tbb/src/tbb/concurrent_queue.cpp
 03092fe8630a2d13bedc1a4377123baa *src/tbb/src/tbb/concurrent_vector.cpp
 17b69f4781931d41856d534a0ad631b0 *src/tbb/src/tbb/condition_variable.cpp
 66b1e1a766d17c48181565d71d141d1e *src/tbb/src/tbb/critical_section.cpp
 ea23d762b9cdb1d6d3bb84ca3512adfd *src/tbb/src/tbb/custom_scheduler.h
-f3684d0f412fa21aadfc5f925efd5efd *src/tbb/src/tbb/dynamic_link.cpp
+548b811b073e2dc009317c59121bd94e *src/tbb/src/tbb/dynamic_link.cpp
 051a6351227e5ccf10d120d51939973d *src/tbb/src/tbb/dynamic_link.h
 c132c670715f86d76c15c53b5646592e *src/tbb/src/tbb/governor.cpp
 8adec3f1b574df47258f0717ae705bb2 *src/tbb/src/tbb/governor.h
@@ -468,7 +468,7 @@ e31cfcc5df4c9351126d719b3cdf9bfb *src/tbb/src/tbb/tbb_version.h
 40e548eee116131106b07314b4727cdd *src/tbb/src/tbb/tls.h
 7ac3364845054ad0d051791ee0f2516a *src/tbb/src/tbb/tools_api/disable_warnings.h
 92efdff651d26cd65e58107687741ff2 *src/tbb/src/tbb/tools_api/ittnotify.h
-a5b5512ffe112b68ef068cef579c7d8b *src/tbb/src/tbb/tools_api/ittnotify_config.h
+857aa1b067953e1d9e2d40483d014c56 *src/tbb/src/tbb/tools_api/ittnotify_config.h
 e0e195ceddb0a477a4d81ebe7fdb34a9 *src/tbb/src/tbb/tools_api/ittnotify_static.c
 e2cb7c16be1142a2fb86d7e97e762910 *src/tbb/src/tbb/tools_api/ittnotify_static.h
 1fe334d1ee77f70ced1dd531a0609033 *src/tbb/src/tbb/tools_api/ittnotify_types.h
@@ -498,7 +498,7 @@ e2eb9c622329a51e45226266cced6295 *src/tbb/src/tbbmalloc/backend.cpp
 37f828a4828f2fbe5b3cfaed9380f2fc *src/tbb/src/tbbmalloc/lin64ipf-tbbmalloc-export.def
 530498c387acf1ecf7fb1f84a36f41ff *src/tbb/src/tbbmalloc/mac32-tbbmalloc-export.def
 530498c387acf1ecf7fb1f84a36f41ff *src/tbb/src/tbbmalloc/mac64-tbbmalloc-export.def
-5acbd0b05874ab6a5605b46c58cecbb9 *src/tbb/src/tbbmalloc/proxy.cpp
+682b2eccaa43207b7d382540d7041935 *src/tbb/src/tbbmalloc/proxy.cpp
 f2f6d2834d7bc76aa2392407a2a73953 *src/tbb/src/tbbmalloc/proxy.h
 95709c82498e0d75fc0e9fc6fab7e150 *src/tbb/src/tbbmalloc/proxy_overload_osx.h
 c3e08d2625b537b1858302a4f09b5c53 *src/tbb/src/tbbmalloc/shared_utils.h
@@ -516,4 +516,4 @@ da1bd66f7c1bc19cd4542daac9ddfa5e *src/tbb/src/tbbmalloc/win64-tbbmalloc-export.d
 7eab0aae6dc1101e7220bbdde0408ec9 *src/tbb/src/tbbproxy/tbbproxy.cpp
 9c42494a8a946f4e7d9a1dd823c3fca9 *tests/doRUnit.R
 cc4d7832dc5a9ecc2806b44c0c29fe2f *tools/config.R
-58b6af6d456f73ec67ff1f3b28f10713 *tools/config/configure.R
+5deb08299916c5c1aeec5a286b3aa0f0 *tools/config/configure.R
