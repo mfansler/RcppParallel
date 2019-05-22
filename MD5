@@ -1,4 +1,4 @@
-3c1975cc8121f28f3fb978fe6767e045 *DESCRIPTION
+45a8f713e9e4ec1b3340d3f38048a3b7 *DESCRIPTION
 50d75b4d42421eb8dc927070d5b190d4 *NAMESPACE
 5a1495bf7a04c7ba544b8d4c4c002d79 *R/build.R
 1c89f724d1263d253689bb19202fc187 *R/hooks.R
@@ -8,15 +8,17 @@ c738dae81e6eb1863eca51006694f2fb *R/skeleton.R
 b655b8ee83719d6f623567248466e2d4 *cleanup.win
 cde1332e18de6608b528526313571267 *configure
 b481df59119f55840bf861e8e1c1a9f9 *configure.win
-a6fe2109b6462d54a09e7b49c3a1e4a6 *inst/NEWS
+875157cecc238442c8e9a38f6acad414 *inst/NEWS
 5ff513fb33023d45231d644c6cd9e7ba *inst/include/RcppParallel.h
 d4ab7ad2384f150a32637a284e831bc0 *inst/include/RcppParallel/Common.h
-75fa2c96d275d243b6bee4b3dcd788cd *inst/include/RcppParallel/RMatrix.h
+3749562d299d4065cc99f275e7f2585a *inst/include/RcppParallel/RMatrix.h
 7b0de08055d8aa0b21de7a1260083041 *inst/include/RcppParallel/RVector.h
 70ea4c28bcd015bcf2eef88bb1d45ced *inst/include/RcppParallel/TBB.h
 804a6a70a3eefef66c5700bd0fbbfe9b *inst/include/RcppParallel/Timer.h
 bc648370d52bcd49fafb79868128d370 *inst/include/RcppParallel/TinyThread.h
 719fca47bf2eb469426db8b3dd0d1b9b *inst/include/index.html
+cbc1275e9a34dd943d4d1d31863b15bf *inst/include/serial/tbb/parallel_for.h
+cb129f0cecff46bdea633d23db82a17f *inst/include/serial/tbb/tbb_annotate.h
 209719cac37b3803946a2e1a7e4113ad *inst/include/tbb/aggregator.h
 19701b1db7b3a92d2a5557ace6a8c893 *inst/include/tbb/aligned_space.h
 c54ee97f883b710de743577253b23d60 *inst/include/tbb/atomic.h
@@ -29,7 +31,7 @@ c0a79121302a0d5e46f9351fcc2a8ffd *inst/include/tbb/compat/condition_variable
 af10ece5a58df1dfc39bcd6a9e1dbdd7 *inst/include/tbb/compat/ppl.h
 a3670113bb7b44a3536fc068b1934f79 *inst/include/tbb/compat/thread
 4227b06d564f5d86009245523891a43f *inst/include/tbb/compat/tuple
-af4e9e89cf1ccc469409941af082e54e *inst/include/tbb/concurrent_hash_map.h
+5323f286c6c19cec872aa31cf6808527 *inst/include/tbb/concurrent_hash_map.h
 0d497d4397dd898c9a65ed4807a9ce70 *inst/include/tbb/concurrent_lru_cache.h
 9c15d2467f4606b55d82c58c5a0eff2d *inst/include/tbb/concurrent_priority_queue.h
 2ad30e4107d1db6b3c638f60c1d96b03 *inst/include/tbb/concurrent_queue.h
@@ -235,7 +237,7 @@ c0a79121302a0d5e46f9351fcc2a8ffd *src/tbb/include/tbb/compat/condition_variable
 af10ece5a58df1dfc39bcd6a9e1dbdd7 *src/tbb/include/tbb/compat/ppl.h
 a3670113bb7b44a3536fc068b1934f79 *src/tbb/include/tbb/compat/thread
 4227b06d564f5d86009245523891a43f *src/tbb/include/tbb/compat/tuple
-214dab6c7554935ff57fb27a6f150801 *src/tbb/include/tbb/concurrent_hash_map.h
+1a9befd30920c90248c0d6dc08c8e67c *src/tbb/include/tbb/concurrent_hash_map.h
 947c4beac3ef70bdd397c5dd9f8f20f8 *src/tbb/include/tbb/concurrent_lru_cache.h
 9c15d2467f4606b55d82c58c5a0eff2d *src/tbb/include/tbb/concurrent_priority_queue.h
 2ad30e4107d1db6b3c638f60c1d96b03 *src/tbb/include/tbb/concurrent_queue.h
@@ -515,6 +517,6 @@ da1bd66f7c1bc19cd4542daac9ddfa5e *src/tbb/src/tbbmalloc/win64-tbbmalloc-export.d
 14f025a300e77c2f4c50f075a7315208 *src/tbb/src/tbbproxy/tbbproxy-windows.asm
 7eab0aae6dc1101e7220bbdde0408ec9 *src/tbb/src/tbbproxy/tbbproxy.cpp
 9c42494a8a946f4e7d9a1dd823c3fca9 *tests/doRUnit.R
-18c0f640b0a54d4265cbd6431d11007b *tools/config.R
+af8e7488d578542b16949cb62833f616 *tools/config.R
 38ac37bc72560d175fd527894cf53735 *tools/config/cleanup.R
 51aada6d029f16bc6e80bc8195c410e2 *tools/config/configure.R
