@@ -1,4 +1,4 @@
-45a8f713e9e4ec1b3340d3f38048a3b7 *DESCRIPTION
+4785c7aa919dd342f638704419dca769 *DESCRIPTION
 50d75b4d42421eb8dc927070d5b190d4 *NAMESPACE
 5a1495bf7a04c7ba544b8d4c4c002d79 *R/build.R
 1c89f724d1263d253689bb19202fc187 *R/hooks.R
@@ -8,14 +8,14 @@ c738dae81e6eb1863eca51006694f2fb *R/skeleton.R
 b655b8ee83719d6f623567248466e2d4 *cleanup.win
 cde1332e18de6608b528526313571267 *configure
 b481df59119f55840bf861e8e1c1a9f9 *configure.win
-875157cecc238442c8e9a38f6acad414 *inst/NEWS
+f9d8bed7ec9c56f52984b19a1004144b *inst/NEWS
 5ff513fb33023d45231d644c6cd9e7ba *inst/include/RcppParallel.h
 d4ab7ad2384f150a32637a284e831bc0 *inst/include/RcppParallel/Common.h
 3749562d299d4065cc99f275e7f2585a *inst/include/RcppParallel/RMatrix.h
 7b0de08055d8aa0b21de7a1260083041 *inst/include/RcppParallel/RVector.h
 70ea4c28bcd015bcf2eef88bb1d45ced *inst/include/RcppParallel/TBB.h
 804a6a70a3eefef66c5700bd0fbbfe9b *inst/include/RcppParallel/Timer.h
-bc648370d52bcd49fafb79868128d370 *inst/include/RcppParallel/TinyThread.h
+640b20f47726aabcc8cf501ab43375e1 *inst/include/RcppParallel/TinyThread.h
 719fca47bf2eb469426db8b3dd0d1b9b *inst/include/index.html
 cbc1275e9a34dd943d4d1d31863b15bf *inst/include/serial/tbb/parallel_for.h
 cb129f0cecff46bdea633d23db82a17f *inst/include/serial/tbb/tbb_annotate.h
@@ -151,7 +151,7 @@ cee8e00decc99c13c084f3af8256c9df *man/RcppParallel-package.Rd
 cf21b0e90c8e12da67f81db0f9e3edad *man/RcppParallel.package.skeleton.Rd
 5b33e213c19d4da27cf4f401a2020518 *man/RcppParallelFlags.Rd
 f3b91a97f7f2c4cbe658b0858d74017e *man/setThreadOptions.Rd
-2d50d18958ce2746e8549b21697fafc8 *src/Makevars.in
+7ba831317b47182ed1693e2bb196cbd7 *src/Makevars.in
 577ff72d88540ba48b61c11fe1d0cb3c *src/init.cpp
 32ee0b5805df0877ee7e81d97619ec96 *src/options.cpp
 ab34a7f2db75a1b1ad2eeddeefd330ce *src/tbb/CHANGES
@@ -518,5 +518,5 @@ da1bd66f7c1bc19cd4542daac9ddfa5e *src/tbb/src/tbbmalloc/win64-tbbmalloc-export.d
 7eab0aae6dc1101e7220bbdde0408ec9 *src/tbb/src/tbbproxy/tbbproxy.cpp
 9c42494a8a946f4e7d9a1dd823c3fca9 *tests/doRUnit.R
 af8e7488d578542b16949cb62833f616 *tools/config.R
-38ac37bc72560d175fd527894cf53735 *tools/config/cleanup.R
+b564bb610841dd8709edc843eeca49a0 *tools/config/cleanup.R
 51aada6d029f16bc6e80bc8195c410e2 *tools/config/configure.R
