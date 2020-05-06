@@ -1,4 +1,4 @@
-26e59102bf659e5991dc7837854ac4ec *DESCRIPTION
+2e326a9101ee5c474f4bcfd4272420b6 *DESCRIPTION
 50d75b4d42421eb8dc927070d5b190d4 *NAMESPACE
 5a1495bf7a04c7ba544b8d4c4c002d79 *R/build.R
 e40b3b2f751d79e1eeccbd56d333f4dd *R/hooks.R
@@ -8,7 +8,7 @@ c738dae81e6eb1863eca51006694f2fb *R/skeleton.R
 b655b8ee83719d6f623567248466e2d4 *cleanup.win
 cde1332e18de6608b528526313571267 *configure
 b481df59119f55840bf861e8e1c1a9f9 *configure.win
-e1995fada10f36a24aff1b4af444016b *inst/NEWS
+16e71417fba7440874d40073b6e8e738 *inst/NEWS
 a621d9e091b717f24ce5033323c85ba2 *inst/include/RcppParallel.h
 a6c056a4c7e284fb4a0258a525669340 *inst/include/RcppParallel/Backend.h
 d4ab7ad2384f150a32637a284e831bc0 *inst/include/RcppParallel/Common.h
@@ -48,8 +48,8 @@ a07b99914acafd9305f36c97a0d68d57 *inst/include/tbb/gfx_factory.h
 27e886416f282e2b169e88a9f1a49272 *inst/include/tbb/global_control.h
 3f50ec352879532fe8f2c417dc0a3202 *inst/include/tbb/index.html
 15c2be0b6829662d1cd8c70e077490cf *inst/include/tbb/internal/_aggregator_impl.h
-25f71afe2b1d47abea52645b539df89f *inst/include/tbb/internal/_concurrent_queue_impl.h
-3fbc5ed9482111de7d6c326c779745c0 *inst/include/tbb/internal/_concurrent_unordered_impl.h
+73ffa2068366f0a579212805689ab239 *inst/include/tbb/internal/_concurrent_queue_impl.h
+36db2b79fd8ea64557f075101debb954 *inst/include/tbb/internal/_concurrent_unordered_impl.h
 62d2aeb677e93143ab913fb0396e5415 *inst/include/tbb/internal/_flow_graph_async_msg_impl.h
 72ba10b5a1011a471cf095836d288322 *inst/include/tbb/internal/_flow_graph_body_impl.h
 574e3d9c3fd3110f15f8caf0c0d4e6e2 *inst/include/tbb/internal/_flow_graph_cache_impl.h
@@ -150,7 +150,7 @@ cee8e00decc99c13c084f3af8256c9df *man/RcppParallel-package.Rd
 cf21b0e90c8e12da67f81db0f9e3edad *man/RcppParallel.package.skeleton.Rd
 5b33e213c19d4da27cf4f401a2020518 *man/RcppParallelFlags.Rd
 d5aa6a871c5b1ef15377dca51706277c *man/setThreadOptions.Rd
-eec626907c1276435e752210c4b5e79c *src/Makevars.in
+c8fcb3d818067dd09273f6c1f3567564 *src/Makevars.in
 577ff72d88540ba48b61c11fe1d0cb3c *src/init.cpp
 32ee0b5805df0877ee7e81d97619ec96 *src/options.cpp
 ab34a7f2db75a1b1ad2eeddeefd330ce *src/tbb/CHANGES
@@ -397,7 +397,7 @@ e283d916ab5d813851f807304affbd15 *src/tbb/src/tbb/arena.cpp
 8a17cb6a297993d4c5f11587cc661657 *src/tbb/src/tbb/concurrent_hash_map.cpp
 5e972e6b566545b14654b4d667a7dcaf *src/tbb/src/tbb/concurrent_monitor.cpp
 24bf984dae14e3fcb50d0d3aa738e1dd *src/tbb/src/tbb/concurrent_monitor.h
-a6847dca829f0511042127ac665b1d88 *src/tbb/src/tbb/concurrent_queue.cpp
+aa7a71c5dfcbbac007b6bc4bea5a09bb *src/tbb/src/tbb/concurrent_queue.cpp
 03092fe8630a2d13bedc1a4377123baa *src/tbb/src/tbb/concurrent_vector.cpp
 17b69f4781931d41856d534a0ad631b0 *src/tbb/src/tbb/condition_variable.cpp
 66b1e1a766d17c48181565d71d141d1e *src/tbb/src/tbb/critical_section.cpp
@@ -463,7 +463,7 @@ ffb3159c543befa2200fe87f9c45524a *src/tbb/src/tbb/tbb_main.cpp
 bc67ef5788d40fd8e164cb71e38c2562 *src/tbb/src/tbb/tbb_misc_ex.cpp
 6205ba638d679709c594097fdba32484 *src/tbb/src/tbb/tbb_resource.rc
 32b8e22ca3dd019cb0635e34e1505138 *src/tbb/src/tbb/tbb_statistics.cpp
-3d7aff304dd8af7ab99e7e3b237ebc54 *src/tbb/src/tbb/tbb_statistics.h
+5adfb726cbc82b5ec4fdb227ef224ac4 *src/tbb/src/tbb/tbb_statistics.h
 2fd5a05782353c39f041bb83724c7432 *src/tbb/src/tbb/tbb_thread.cpp
 e31cfcc5df4c9351126d719b3cdf9bfb *src/tbb/src/tbb/tbb_version.h
 40e548eee116131106b07314b4727cdd *src/tbb/src/tbb/tls.h
@@ -518,4 +518,4 @@ da1bd66f7c1bc19cd4542daac9ddfa5e *src/tbb/src/tbbmalloc/win64-tbbmalloc-export.d
 f583b9e335d83e862b59f19b35f38f58 *tests/doRUnit.R
 af8e7488d578542b16949cb62833f616 *tools/config.R
 b564bb610841dd8709edc843eeca49a0 *tools/config/cleanup.R
-1f65577b20dd2a9696d235baf850e5fd *tools/config/configure.R
+a6bdd8a0d5088b991b2c865562a4dab1 *tools/config/configure.R
