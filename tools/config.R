@@ -266,10 +266,6 @@ read_r_config <- function(
             stop(sprintf(fmt, getRversion()))
         }
 
-        # notify user
-        if (verbose)
-            message("*** executing 'R CMD config --all'")
-
         # execute action
         stdout <- tempfile("r-cmd-config-", fileext = ".txt")
         on.exit(unlink(stdout), add = TRUE)
@@ -282,10 +278,6 @@ read_r_config <- function(
         config <- parse_key_value(output)
 
     } else {
-
-        # notify user
-        if (verbose)
-            message("*** executing 'R CMD config'")
 
         # loop through requested values and call R CMD config
         config <- lapply(values, function(value) {
@@ -581,6 +573,15 @@ if (!interactive()) {
     # extract path to install script
     args <- commandArgs(TRUE)
     type <- args[[1]]
+
+    # preserve working directory
+    owd <- getwd()
+    on.exit(setwd(owd), add = TRUE)
+
+    # switch working directory to the calling scripts's directory as set
+    # by the shell, in case the R working directory was set to something else
+    basedir <- Sys.getenv("PWD", unset = ".")
+    setwd(basedir)
 
     # report start of execution
     package <- Sys.getenv("R_PACKAGE_NAME", unset = "<unknown>")
