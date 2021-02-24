@@ -80,6 +80,17 @@ ifeq ($(USE_TBB),  SunOS)
    endif
 endif
 
+# Silence some compilation warnings. This is a dirty trick, but is necessary
+# as TBB uses a number of #pragmas and compiler-specific switches depending
+# on the compiler and machine being compiled for, and it selects and activates
+# those switches only after confirming the specific compiler features it needs.
+# Set VERBOSE=1 to have a more verbose install.
+ifneq ($(OS), Windows_NT)
+  ifeq ($(VERBOSE),)
+    MAKE_ARGS += >/dev/null 2>&1
+  endif
+endif
+
 .PHONY: all tbb
 
 # Order is important in Windows' case. See PKG_LIBS above

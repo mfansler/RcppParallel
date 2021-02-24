@@ -1,4 +1,4 @@
-d97a80d19f0859414b755755afa0a8dd *DESCRIPTION
+af22a2c5c42cb46d38f3194aca5153de *DESCRIPTION
 50d75b4d42421eb8dc927070d5b190d4 *NAMESPACE
 5a1495bf7a04c7ba544b8d4c4c002d79 *R/build.R
 e40b3b2f751d79e1eeccbd56d333f4dd *R/hooks.R
@@ -8,7 +8,7 @@ c738dae81e6eb1863eca51006694f2fb *R/skeleton.R
 b655b8ee83719d6f623567248466e2d4 *cleanup.win
 cde1332e18de6608b528526313571267 *configure
 b481df59119f55840bf861e8e1c1a9f9 *configure.win
-10af4fb089ac4446794fa4063e04e6ed *inst/NEWS
+308454a2c56261d93eda2548aed22079 *inst/NEWS
 a621d9e091b717f24ce5033323c85ba2 *inst/include/RcppParallel.h
 a6c056a4c7e284fb4a0258a525669340 *inst/include/RcppParallel/Backend.h
 d4ab7ad2384f150a32637a284e831bc0 *inst/include/RcppParallel/Common.h
@@ -156,6 +156,9 @@ e35e292c6770fa3ed3a7ebf556dd9cf0 *inst/include/tbb/tick_count.h
 36a8c5ad8e670d6c23f41c480b437b56 *inst/include/tthread/fast_mutex.h
 a81a9a9aa5599ac8e23deeabd7d38b19 *inst/include/tthread/tinythread.h
 9d61a54db6779348e55e3725a8782ea4 *inst/include/tthread/tinythread.inl
+3335368695fe112847585031d22bbdf2 *inst/lib/libtbb.dylib
+b39833c9243341bd3c39df513639184e *inst/lib/libtbbmalloc.dylib
+f155aea71c54c25c7d52be561df273d9 *inst/lib/libtbbmalloc_proxy.dylib
 0c44e73699a42f681fe19e2c97d387b0 *inst/presentations/header.tex
 8e6bce8f0fa9f6145727aeafac626ae2 *inst/presentations/images/big-data-big-machine-tweet.png
 c2423aacc0fa4e2f520477749c96e7ad *inst/presentations/rcpp_parallel_talk_jan2015.Rmd
@@ -174,7 +177,7 @@ cee8e00decc99c13c084f3af8256c9df *man/RcppParallel-package.Rd
 cf21b0e90c8e12da67f81db0f9e3edad *man/RcppParallel.package.skeleton.Rd
 5b33e213c19d4da27cf4f401a2020518 *man/RcppParallelFlags.Rd
 d5aa6a871c5b1ef15377dca51706277c *man/setThreadOptions.Rd
-5df324293b885c665d49775a92227977 *src/Makevars.in
+31ac7991c4b7d3610a8ff5beeb196363 *src/Makevars.in
 577ff72d88540ba48b61c11fe1d0cb3c *src/init.cpp
 c099cc3f844f88183922ef134d6b79b5 *src/options.cpp
 ab34a7f2db75a1b1ad2eeddeefd330ce *src/tbb/CHANGES
@@ -221,7 +224,7 @@ e1e993e459ebee556195d7299c7b61de *src/tbb/build/linux.inc
 9a78898d64edb0c7c4b652d2ad73d251 *src/tbb/build/macos.clang.inc
 25b14f69091a9e4260d1085936c2679a *src/tbb/build/macos.gcc.inc
 5f448d388b1d11dc410936a437c286e4 *src/tbb/build/macos.icc.inc
-1ede16ad865da57cd4357eb520e6eab0 *src/tbb/build/macos.inc
+5d9d3881c3b7a08e534a2c6bc481fbb1 *src/tbb/build/macos.inc
 6a7a2c7bd4c40e65be0856efa6f06da8 *src/tbb/build/mic.icc.inc
 1f6dd7336b11ed43dbe0644b5e3c95cf *src/tbb/build/mic.linux.inc
 e453b7a13e460de9d79743ca394fc518 *src/tbb/build/mic.linux.launcher.sh
