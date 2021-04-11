@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2005-2017 Intel Corporation
+    Copyright (c) 2005-2019 Intel Corporation
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -12,10 +12,6 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-
-
 */
 
 #ifndef __RML_job_automaton_H
@@ -26,8 +22,8 @@
 
 #if defined(_MSC_VER) && !defined(__INTEL_COMPILER)
     // Workaround for overzealous compiler warnings 
-    #pragma warning (push)
-    #pragma warning (disable: 4244)
+    // #pragma warning (push)
+    // #pragma warning (disable: 4244)
 #endif
 
 namespace rml {
@@ -139,7 +135,7 @@ public:
 
 
 #if defined(_MSC_VER) && !defined(__INTEL_COMPILER)
-    #pragma warning (pop)
+    // #pragma warning (pop)
 #endif // warning 4244 are back
 
 #endif /* __RML_job_automaton_H */

@@ -13,6 +13,7 @@ mallocDllInfo <- NULL
          dllInfo <<- dyn.load(tbb, local = FALSE, now = TRUE)
       }
    }
+   
    tbbMalloc <- tbbLibPath("malloc")
    if (!is.null(tbbMalloc)) {
       if (!file.exists(tbbMalloc)) {
@@ -22,8 +23,24 @@ mallocDllInfo <- NULL
       }
    }
    
-   # load the package library
-   library.dynam("RcppParallel", pkgname, libname)
+   # work around roxygen2 issue
+   documenting <- FALSE
+   checks <- list(
+      call("::", as.symbol("devtools"), as.symbol("document")),
+      call("::", as.symbol("roxygen2"), as.symbol("roxygenize"))
+   )
+   
+   for (call in sys.calls()) {
+      for (check in checks) {
+         if (identical(call[[1L]], check)) {
+            documenting <- TRUE
+            break
+         }
+      }
+   }
+   
+   if (!documenting)
+      library.dynam("RcppParallel", pkgname, libname)
    
 }
 
@@ -35,7 +52,9 @@ mallocDllInfo <- NULL
    # unload tbb if we loaded it
    if (!is.null(dllInfo))
       dyn.unload(dllInfo[["path"]])
+   
    # unload tbbmalloc if we loaded it
    if (!is.null(mallocDllInfo))
       dyn.unload(mallocDllInfo[["path"]])
+
 }

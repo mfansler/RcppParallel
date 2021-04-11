@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2005-2017 Intel Corporation
+    Copyright (c) 2005-2019 Intel Corporation
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -12,10 +12,6 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-
-
 */
 
 #ifndef __TBB_tbb_allocator_H
@@ -48,8 +44,8 @@ namespace internal {
 
 #if _MSC_VER && !defined(__INTEL_COMPILER)
     // Workaround for erroneous "unreferenced parameter" warning in method destroy.
-    #pragma warning (push)
-    #pragma warning (disable: 4100)
+    // #pragma warning (push)
+    // #pragma warning (disable: 4100)
 #endif
 
 //! Meets "allocator" requirements of ISO C++ Standard, Section 20.1.5
@@ -123,7 +119,7 @@ public:
 };
 
 #if _MSC_VER && !defined(__INTEL_COMPILER)
-    #pragma warning (pop)
+    // #pragma warning (pop)
 #endif // warning 4100 is back
 
 //! Analogous to std::allocator<void>, as defined in ISO C++ Standard, Section 20.4.1
@@ -174,7 +170,7 @@ public:
 
     pointer allocate(const size_type n, const void *hint = 0 ) {
         pointer ptr = base_allocator_type::allocate( n, hint );
-        std::memset( (void*) ptr, 0, n * sizeof(value_type) );
+        std::memset( static_cast<void*>(ptr), 0, n * sizeof(value_type) );
         return ptr;
     }
 };

@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2005-2017 Intel Corporation
+    Copyright (c) 2005-2019 Intel Corporation
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -12,11 +12,10 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-
-
 */
+
+#ifndef _TBB_assert_impl_H
+#define _TBB_assert_impl_H
 
 // IMPORTANT: To use assertion handling in TBB, exactly one of the TBB source files
 // should #include tbb_assert_impl.h thus instantiating assertion handling routines.
@@ -37,8 +36,6 @@
 #else
 #define __TBB_EXPORTED_FUNC
 #endif
-
-using namespace std;
 
 #if __TBBMALLOC_BUILD
 namespace rml { namespace internal {
@@ -72,7 +69,7 @@ namespace tbb {
                         _CrtDbgBreak();
 #else
                 fflush(stderr);
-                abort();
+                std::abort();
 #endif
             }
         }
@@ -87,7 +84,7 @@ namespace tbb {
         //! Report a runtime warning.
         void __TBB_EXPORTED_FUNC runtime_warning( const char* format, ... )
         {
-            char str[1024]; memset(str, 0, 1024);
+            char str[1024]; memset(static_cast<void*>(str), 0, 1024);
             va_list args; va_start(args, format);
             vsnprintf( str, 1024-1, format, args);
             va_end(args);
@@ -101,3 +98,5 @@ namespace tbb {
 #else
 }  // namespace tbb
 #endif
+
+#endif /*_TBB_assert_impl_H*/

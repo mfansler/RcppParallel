@@ -5,8 +5,12 @@ stopifnot(require(RcppParallel, quietly = TRUE))
 ## Set a seed to make the test deterministic
 set.seed(42)
 
-# Don't use TBB
-Sys.setenv(RCPP_PARALLEL_BACKEND = "tinythread")
+## Set a default backend
+backend <- Sys.getenv("RCPP_PARALLEL_BACKEND", unset = NA)
+if (is.na(backend))
+   Sys.setenv(RCPP_PARALLEL_BACKEND = "tinythread")
+
+writeLines(paste("Using backend:", Sys.getenv("RCPP_PARALLEL_BACKEND")))
 
 ## Define tests
 suite <- defineTestSuite(

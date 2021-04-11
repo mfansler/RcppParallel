@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2005-2017 Intel Corporation
+    Copyright (c) 2005-2019 Intel Corporation
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -12,10 +12,6 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-
-
 */
 
 #include "tbb/tbb_stddef.h"
@@ -29,11 +25,9 @@
 #include <new>
 #include <cstring>   // for memset()
 
-using namespace std;
-
 #if defined(_MSC_VER) && defined(_Wp64)
     // Workaround for overzealous compiler warnings in /Wp64 mode
-    #pragma warning (disable: 4267)
+    // #pragma warning (disable: 4267)
 #endif
 
 #define RECORD_EVENTS 0
@@ -155,8 +149,8 @@ public:
 
 #if _MSC_VER && !defined(__INTEL_COMPILER)
     // unary minus operator applied to unsigned type, result still unsigned
-    #pragma warning( push )
-    #pragma warning( disable: 4146 )
+    // #pragma warning( push )
+    // #pragma warning( disable: 4146 )
 #endif
 
 static void* static_invalid_page;
@@ -334,7 +328,7 @@ void micro_queue::make_invalid( ticket k )
 }
 
 #if _MSC_VER && !defined(__INTEL_COMPILER)
-    #pragma warning( pop )
+    // #pragma warning( pop )
 #endif // warning 4146 is back
 
 //------------------------------------------------------------------------
@@ -353,7 +347,7 @@ concurrent_queue_base_v3::concurrent_queue_base_v3( size_t item_sz ) {
     __TBB_ASSERT( is_aligned(&my_rep->head_counter, NFS_GetLineSize()), "alignment error" );
     __TBB_ASSERT( is_aligned(&my_rep->tail_counter, NFS_GetLineSize()), "alignment error" );
     __TBB_ASSERT( is_aligned(&my_rep->array, NFS_GetLineSize()), "alignment error" );
-    memset((void*) my_rep, 0, sizeof(concurrent_queue_rep));
+    std::memset(static_cast<void*>(my_rep),0,sizeof(concurrent_queue_rep));
     new ( &my_rep->items_avail ) concurrent_monitor();
     new ( &my_rep->slots_avail ) concurrent_monitor();
     this->item_size = item_sz;

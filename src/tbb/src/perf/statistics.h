@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2005-2017 Intel Corporation
+    Copyright (c) 2005-2019 Intel Corporation
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -12,10 +12,6 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-
-
 */
 
 // Internal Intel tool
@@ -174,7 +170,7 @@ private:
 
 //! using: Func(const char *fmt, ...) { vargf2buff(buff, 128, fmt);...
 #define vargf2buff(name, size, fmt) \
-    char name[size]; memset(name, 0, size); \
+    char name[size]; memset(static_cast<void*>(name), 0, size); \
     va_list args; va_start(args, fmt); \
     vsnprintf(name, size-1, fmt, args); \
     va_end(args);

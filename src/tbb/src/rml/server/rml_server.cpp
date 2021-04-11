@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2005-2017 Intel Corporation
+    Copyright (c) 2005-2019 Intel Corporation
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -12,10 +12,6 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-
-
 */
 
 #include "rml_tbb.h"
@@ -31,17 +27,17 @@
 #include "tbb/tbb_misc.h"           // Get AvailableHwConcurrency() from here.
 #if _MSC_VER==1500 && !defined(__INTEL_COMPILER)
 // VS2008/VC9 seems to have an issue;
-#pragma warning( push )
-#pragma warning( disable: 4985 )
+// #pragma warning( push )
+// #pragma warning( disable: 4985 )
 #endif
 #include "tbb/concurrent_vector.h"
 #if _MSC_VER==1500 && !defined(__INTEL_COMPILER)
-#pragma warning( pop )
+// #pragma warning( pop )
 #endif
 #if _MSC_VER && defined(_Wp64)
 // Workaround for overzealous compiler warnings
-#pragma warning (push)
-#pragma warning (disable: 4244)
+// #pragma warning (push)
+// #pragma warning (disable: 4244)
 #endif
 
 #include "job_automaton.h"
@@ -562,8 +558,8 @@ struct thread_map_base {
 
 #if _MSC_VER && !defined(__INTEL_COMPILER)
     // Suppress overzealous compiler warnings about uninstantiable class
-    #pragma warning(push)
-    #pragma warning(disable:4510 4610)
+    // #pragma warning(push)
+    // #pragma warning(disable:4510 4610)
 #endif
 
 template<typename T>
@@ -572,7 +568,7 @@ class padded: public T {
 };
 
 #if _MSC_VER && !defined(__INTEL_COMPILER)
-    #pragma warning(pop)
+    // #pragma warning(pop)
 #endif
 
 // FIXME - should we pad out memory to avoid false sharing of our global variables?
@@ -1354,8 +1350,8 @@ void make_job( Connection& c, typename Connection::server_thread_type& t ) {
 
 #if _MSC_VER && !defined(__INTEL_COMPILER)
 // Suppress "conditional expression is constant" warning.
-#pragma warning( push )
-#pragma warning( disable: 4127 )
+// #pragma warning( push )
+// #pragma warning( disable: 4127 )
 #endif
 #if RML_USE_WCRM
 template<typename Server, typename Client>
@@ -1422,7 +1418,7 @@ void generic_connection<Server,Client>::request_close_connection( bool ) {
 #endif
 }
 #if _MSC_VER && !defined(__INTEL_COMPILER)
-#pragma warning( pop )
+// #pragma warning( pop )
 #endif
 
 #if RML_USE_WCRM
@@ -1681,7 +1677,7 @@ void wakeup_some_tbb_threads()
 {
     /* First, atomically grab the connection, then increase the server ref count to keep
        it from being released prematurely.  Second, check if the balance is available for TBB
-       and the tbb conneciton has slack to exploit.  If the answer is true, go ahead and
+       and the tbb connection has slack to exploit.  If the answer is true, go ahead and
        try to wake some up. */
     if( generic_connection<tbb_server,tbb_client >::get_addr(active_tbb_connections)==0 )
         // the next connection will see the change; return.
@@ -1889,8 +1885,8 @@ server_thread::~server_thread() {
 
 #if _MSC_VER && !defined(__INTEL_COMPILER)
     // Suppress overzealous compiler warnings about an initialized variable 'sink_for_alloca' not referenced
-    #pragma warning(push)
-    #pragma warning(disable:4189)
+    // #pragma warning(push)
+    // #pragma warning(disable:4189)
 #endif
 __RML_DECL_THREAD_ROUTINE server_thread::thread_routine( void* arg ) {
     server_thread* self = static_cast<server_thread*>(arg);
@@ -1903,7 +1899,7 @@ __RML_DECL_THREAD_ROUTINE server_thread::thread_routine( void* arg ) {
     return 0;
 }
 #if _MSC_VER && !defined(__INTEL_COMPILER)
-    #pragma warning(pop)
+    // #pragma warning(pop)
 #endif
 
 void server_thread::launch( size_t stack_size ) {

@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2005-2017 Intel Corporation
+    Copyright (c) 2005-2019 Intel Corporation
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -12,10 +12,6 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-
-
 */
 
 // This file is compiled with C++, but linked with a program written in C.
@@ -28,19 +24,19 @@
 
 #if _MSC_VER==1500 && !defined(__INTEL_COMPILER)
 // VS2008/VC9 seems to have an issue;
-#pragma warning( push )
-#pragma warning( disable: 4100 ) 
+// #pragma warning( push )
+// #pragma warning( disable: 4100 ) 
 #elif __TBB_MSVC_UNREACHABLE_CODE_IGNORED
 // VS2012-2013 issues "warning C4702: unreachable code" for the code which really
 // shouldn't be reached according to the test logic: rml::client has the
 // implementation for the "pure" virtual methods to be aborted if they are
 // called.
-#pragma warning( push )
-#pragma warning( disable: 4702 )
+// #pragma warning( push )
+// #pragma warning( disable: 4702 )
 #endif
 #include "rml_omp.h"
 #if ( _MSC_VER==1500 && !defined(__INTEL_COMPILER)) || __TBB_MSVC_UNREACHABLE_CODE_IGNORED
-#pragma warning( pop )
+// #pragma warning( pop )
 #endif
 
 rml::versioned_object::version_type Version;

@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2005-2017 Intel Corporation
+    Copyright (c) 2005-2019 Intel Corporation
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -12,14 +12,10 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-
-
 */
 
-#include "rml_tbb.h"
-#include "../server/thread_monitor.h"
+#include "../rml/include/rml_tbb.h"
+#include "../rml/server/thread_monitor.h"
 #include "tbb/atomic.h"
 #include "tbb/cache_aligned_allocator.h"
 #include "scheduler_common.h"
@@ -106,8 +102,8 @@ static const size_t cache_line_size = tbb::internal::NFS_MaxLineSize;
 
 #if _MSC_VER && !defined(__INTEL_COMPILER)
     // Suppress overzealous compiler warnings about uninstantiable class
-    #pragma warning(push)
-    #pragma warning(disable:4510 4610)
+    // #pragma warning(push)
+    // #pragma warning(disable:4510 4610)
 #endif
 class padded_private_worker: public private_worker {
     char pad[cache_line_size - sizeof(private_worker)%cache_line_size];
@@ -116,7 +112,7 @@ public:
     : private_worker(server,client,i) { suppress_unused_warning(pad); }
 };
 #if _MSC_VER && !defined(__INTEL_COMPILER)
-    #pragma warning(pop)
+    // #pragma warning(pop)
 #endif
 
 class private_server: public tbb_server, no_copy {
@@ -210,8 +206,8 @@ public:
 //------------------------------------------------------------------------
 #if _MSC_VER && !defined(__INTEL_COMPILER)
     // Suppress overzealous compiler warnings about an initialized variable 'sink_for_alloca' not referenced
-    #pragma warning(push)
-    #pragma warning(disable:4189)
+    // #pragma warning(push)
+    // #pragma warning(disable:4189)
 #endif
 #if __MINGW32__ && __GNUC__==4 &&__GNUC_MINOR__>=2 && !__MINGW64__
 // ensure that stack is properly aligned for TBB threads
@@ -224,7 +220,7 @@ __RML_DECL_THREAD_ROUTINE private_worker::thread_routine( void* arg ) {
     return 0;
 }
 #if _MSC_VER && !defined(__INTEL_COMPILER)
-    #pragma warning(pop)
+    // #pragma warning(pop)
 #endif
 
 void private_worker::release_handle(thread_handle handle, bool join) {
@@ -275,6 +271,7 @@ void private_worker::run() {
             // Check/set the invariant for sleeping
             if( my_state!=st_quit && my_server.try_insert_in_asleep_list(*this) ) {
                 my_thread_monitor.commit_wait(c);
+                __TBB_ASSERT( my_state==st_quit || !my_next, "Thread monitor missed a spurious wakeup?" );
                 my_server.propagate_chain_reaction();
             } else {
                 // Invariant broken
@@ -310,8 +307,10 @@ inline void private_worker::wake_or_launch() {
             release_handle(my_handle, governor::does_client_join_workers(my_client));
         }
     }
-    else
+    else {
+        __TBB_ASSERT( !my_next, "Should not wake a thread while it's still in asleep list" );
         my_thread_monitor.notify();
+    }
 }
 
 //------------------------------------------------------------------------
@@ -390,8 +389,11 @@ void private_server::wake_some( int additional_slack ) {
         }
     }
 done:
-    while( w>wakee )
-        (*--w)->wake_or_launch();
+    while( w>wakee ) {
+        private_worker* ww = *--w;
+        ww->my_next = NULL;
+        ww->wake_or_launch();
+    }
 }
 
 void private_server::adjust_job_count_estimate( int delta ) {
