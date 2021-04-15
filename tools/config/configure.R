@@ -64,7 +64,8 @@ switch(
 
 # define special flags for Windows
 db <- configure_database()
-if (Sys.info()[["sysname"]] == "Windows") {
+info <- as.list(Sys.info())
+if (info[["sysname"]] == "Windows") {
    
    cygpath <- nzchar(Sys.which("cygpath"))
    fmt <- if (cygpath) "$(shell cygpath -m \"%s\")" else "%s"
@@ -76,5 +77,21 @@ if (Sys.info()[["sysname"]] == "Windows") {
 }
 
 # use c++0x for compatibility with older compilers
-define(STDVER = "c++0x")
+if (getRversion() < "4.0") {
+   define(STDVER = "stdver=c++0x")
+} else {
+   define(STDVER = "")
+}
+
+# on Solaris, check if we're using gcc or g++
+define(COMPILER = "")
+if (Sys.info()[["sysname"]] == "SunOS") {
+   cxx <- r_cmd_config("CXX")
+   version <- system(paste(cxx, "--version"), intern = TRUE)
+   for (compiler in c("gcc", "g++")) {
+      if (any(grepl(compiler, version, fixed = TRUE))) {
+         define(COMPILER = "gcc")
+      }
+   }
+}
 
