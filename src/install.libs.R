@@ -1,4 +1,5 @@
 
+# !diagnostics suppress=R_PACKAGE_DIR,SHLIB_EXT,R_ARCH
 .install.libs <- function() {
 
    # copy default library
@@ -6,12 +7,19 @@
    dest <- file.path(R_PACKAGE_DIR, paste0("libs", R_ARCH))
    dir.create(dest, recursive = TRUE, showWarnings = FALSE)
    file.copy(files, dest, overwrite = TRUE)
+   
+   # copy symbols if available
    if (file.exists("symbols.rds"))
       file.copy("symbols.rds", dest, overwrite = TRUE)
+
+   # also copy to package 'libs' folder, for devtools
+   libsDest <- paste0("../libs", R_ARCH)
+   dir.create(libsDest, recursive = TRUE, showWarnings = FALSE)
+   file.copy(files, libsDest, overwrite = TRUE)
    
    # copy tbb
    # TODO: use 'dest' library directory once rstan is updated
-   tbbDest <- file.path(R_PACKAGE_DIR, "lib", R_ARCH)
+   tbbDest <- paste0("../inst/lib", R_ARCH)
    dir.create(tbbDest, recursive = TRUE, showWarnings = FALSE)
    
    # check for bundled vs. system tbb
