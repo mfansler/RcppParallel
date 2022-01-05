@@ -1,7 +1,7 @@
 Package: RcppParallel
 Type: Package
 Title: Parallel Programming Tools for 'Rcpp'
-Version: 5.1.4
+Version: 5.1.5
 Authors@R: c(
     person("JJ", "Allaire", role = c("aut"), email = "jj@rstudio.com"),
     person("Romain", "Francois", role = c("aut", "cph")),
@@ -26,7 +26,7 @@ Depends: R (>= 3.0.2)
 Suggests: Rcpp, RUnit, knitr, rmarkdown
 SystemRequirements: GNU make, Intel TBB, Windows: cmd.exe and
         cscript.exe, Solaris: g++ is required
-License: GPL (>= 2)
+License: GPL (>= 3)
 URL: https://rcppcore.github.io/RcppParallel/,
         https://github.com/RcppCore/RcppParallel
 BugReports: https://github.com/RcppCore/RcppParallel/issues
@@ -34,7 +34,7 @@ Biarch: TRUE
 RoxygenNote: 7.1.1
 Encoding: UTF-8
 NeedsCompilation: yes
-Packaged: 2021-05-03 16:57:44 UTC; kevinushey
+Packaged: 2022-01-04 19:55:32 UTC; kevin
 Author: JJ Allaire [aut],
   Romain Francois [aut, cph],
   Kevin Ushey [aut, cre],
@@ -48,4 +48,4 @@ Author: JJ Allaire [aut],
   Microsoft [cph]
 Maintainer: Kevin Ushey <kevin@rstudio.com>
 Repository: CRAN
-Date/Publication: 2021-05-04 07:00:20 UTC
+Date/Publication: 2022-01-05 10:50:07 UTC

@@ -1,14 +1,14 @@
-4783dc6ef7147403f5efc0f15b7d044c *DESCRIPTION
+bb212c7b884141413503e656f3f6eaa7 *DESCRIPTION
 ac5bf58d5c93a8009b0a3b8ae1ecabba *NAMESPACE
-d203141e54f9b6729505978ea44c344f *NEWS.md
-51d2486ca38edeaa99c4414a506f9f5d *R/RcppParallel-package.R
+26660627ceb686d076e64937ba44d614 *NEWS.md
+4939bb891c20f17804b6d352c57c11d8 *R/RcppParallel-package.R
 ad95444db7d259f4cd137668e99a392a *R/flags.R
 7f9b0cbd8ff35068a4989368cbc24735 *R/options.R
 48152deca2e125316d6ed70a77e5e778 *R/platform.R
 1c06fa524c66c810adbab9efe26c060f *R/plugin.R
-2d19518f37e17da8358288e413359c8e *R/skeleton.R
+2fc5ff86b551e1608f6dc21cec8f9a45 *R/skeleton.R
 42425476443fb64a149a069d7104e986 *R/tbb.R
-c06e64d004384da85028018753d4a933 *R/utils.R
+4c49e50cd2d39fe563608f01fff9887d *R/utils.R
 2806b33717b906f8140c8c7d89869e18 *R/zzz.R
 38ba0348cef0ac8408c22acb51d50d83 *cleanup
 64726fb8cb6e37288c195da116ec2ec3 *cleanup.win
@@ -165,7 +165,7 @@ d440867dddd5b3b7aadd690fb404b7a4 *man/flags.Rd
 b350d5e8cdc06cef519240e85f81b78f *man/tbbLibraryPath.Rd
 ebe8052b91ae8741031d258d2b072ea5 *src/Makevars.in
 045a4820dd01a1a7dcaef8fd86b733af *src/init.cpp
-43a00420d25799e2520d2e3be7c998a7 *src/install.libs.R
+4b9c214f6b63d4e467f0b75be25d58fb *src/install.libs.R
 9c48669d14f38146b870211c0735b2e7 *src/options.cpp
 071898d575026ef4372aefb6397b972c *src/tbb/CHANGES
 86d3f3a95c324c9479bd8986968f4327 *src/tbb/COPYING
@@ -240,7 +240,7 @@ f6b36d31b530a6cac0d0c2d888725347 *src/tbb/build/version_info_windows.js
 26fd56fea8591f7653771ec1f015ca4e *src/tbb/build/vs2013/tbbmalloc_proxy.vcxproj
 05383b27de90238f9e901658c1812a81 *src/tbb/build/vs2013/version_string.ver
 729f06a84db37d6f3c0775fb41bc6f19 *src/tbb/build/windows.cl.inc
-a1c04739b67f43df5289151e02d070fd *src/tbb/build/windows.gcc.inc
+e0af70a25cacdc45b478cad831cd1ae5 *src/tbb/build/windows.gcc.inc
 6e88d585cf54c1b4ef9df6fe61cadbd3 *src/tbb/build/windows.icl.inc
 f588ebdb56cddac290c8aca055b90f7b *src/tbb/build/windows.inc
 4f6e4eb4a473bf53eea334ec58ee27b5 *src/tbb/cmake/README.rst
@@ -757,7 +757,7 @@ e253d1de439b0281a1e4347eb474be46 *src/tbb/src/test/test_tuple.cpp
 1a8426b5179086121692fac0922ad991 *tests/doRUnit.R
 447c8872e235f31a7428d4b6aa724a0e *tools/config.R
 036ef8823c3f1f96c246edd2fb65932c *tools/config/cleanup.R
-c46a289a9376930956483cb46b8830a0 *tools/config/configure.R
+192d1f0a2b4387507f98b49e88e3c423 *tools/config/configure.R
 214d69e8857b24cce127f284d78c9fde *tools/tbb/disable-pragmas.R
 22e170b8850604104e2ff7cf11b8ad91 *tools/tbb/fix-memset.R
 61c42a00d296636f242e93f116054ef1 *tools/tbb/update-tbb.R
