@@ -1,6 +1,6 @@
-bb212c7b884141413503e656f3f6eaa7 *DESCRIPTION
+dd9ba928d71a2ccf6a50100526f02a58 *DESCRIPTION
 ac5bf58d5c93a8009b0a3b8ae1ecabba *NAMESPACE
-26660627ceb686d076e64937ba44d614 *NEWS.md
+5aa998b6cb804dc1eb4304c249a0d156 *NEWS.md
 4939bb891c20f17804b6d352c57c11d8 *R/RcppParallel-package.R
 ad95444db7d259f4cd137668e99a392a *R/flags.R
 7f9b0cbd8ff35068a4989368cbc24735 *R/options.R
@@ -8,7 +8,7 @@ ad95444db7d259f4cd137668e99a392a *R/flags.R
 1c06fa524c66c810adbab9efe26c060f *R/plugin.R
 2fc5ff86b551e1608f6dc21cec8f9a45 *R/skeleton.R
 42425476443fb64a149a069d7104e986 *R/tbb.R
-4c49e50cd2d39fe563608f01fff9887d *R/utils.R
+d5af5bf25901f8d7dadeab9c6e18eadb *R/utils.R
 2806b33717b906f8140c8c7d89869e18 *R/zzz.R
 38ba0348cef0ac8408c22acb51d50d83 *cleanup
 64726fb8cb6e37288c195da116ec2ec3 *cleanup.win
@@ -142,7 +142,7 @@ d581c407b1f5d4f8fde8e6e461c5fbb6 *inst/include/tbb/tbb_stddef.h
 a310ea50930f8b898d83f08489a27175 *inst/include/tbb/tbbmalloc_proxy.h
 f9dcd2ed2d97b8d439d6a4abb7da2cde *inst/include/tbb/tick_count.h
 36a8c5ad8e670d6c23f41c480b437b56 *inst/include/tthread/fast_mutex.h
-9ecb9b2d39c30add02250bf830b027c5 *inst/include/tthread/tinythread.h
+207a354ffe1f2ac1f97c42cca5bc85bd *inst/include/tthread/tinythread.h
 9d61a54db6779348e55e3725a8782ea4 *inst/include/tthread/tinythread.inl
 0c44e73699a42f681fe19e2c97d387b0 *inst/presentations/header.tex
 8e6bce8f0fa9f6145727aeafac626ae2 *inst/presentations/images/big-data-big-machine-tweet.png
@@ -358,7 +358,7 @@ f695403ace72c8a47dc29652ee5fddd8 *src/tbb/include/tbb/runtime_loader.h
 b8659493818dcc3865043f1fbb0e5890 *src/tbb/include/tbb/scalable_allocator.h
 76fdaa55c991a4d5bcdd20e816c4edd0 *src/tbb/include/tbb/spin_mutex.h
 5c734b9b080b0aa64c004f7eeb5a0a7a *src/tbb/include/tbb/spin_rw_mutex.h
-439760f253a6736369f3527cdac73e87 *src/tbb/include/tbb/task.h
+1d643fc517a95e564ae269c536e8972d *src/tbb/include/tbb/task.h
 5ffc1ef9ec106461e362a17284942c0b *src/tbb/include/tbb/task_arena.h
 f06a5dbac72c100ccb622d543926a91d *src/tbb/include/tbb/task_group.h
 ffd12e342ce2f7a2230fcb9a3dd263db *src/tbb/include/tbb/task_scheduler_init.h
@@ -757,7 +757,7 @@ e253d1de439b0281a1e4347eb474be46 *src/tbb/src/test/test_tuple.cpp
 1a8426b5179086121692fac0922ad991 *tests/doRUnit.R
 447c8872e235f31a7428d4b6aa724a0e *tools/config.R
 036ef8823c3f1f96c246edd2fb65932c *tools/config/cleanup.R
-192d1f0a2b4387507f98b49e88e3c423 *tools/config/configure.R
+2570a7ac5ed7da69e24a1652d917fe81 *tools/config/configure.R
 214d69e8857b24cce127f284d78c9fde *tools/tbb/disable-pragmas.R
 22e170b8850604104e2ff7cf11b8ad91 *tools/tbb/fix-memset.R
 61c42a00d296636f242e93f116054ef1 *tools/tbb/update-tbb.R

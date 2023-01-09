@@ -1,4 +1,11 @@
 
+## RcppParallel 5.1.6
+
+* Patch for TBB to allow compilation with gcc-13.
+
+* Fixed a memory leak that could occur when using TinyThread on POSIX systems.
+  (#185; @dipertix and and @kevinushey)
+
 ## RcppParallel 5.1.5
 
 * Patches to ensure compatibility with the R 4.2.0 UCRT toolchain on Windows,

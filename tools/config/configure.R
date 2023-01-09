@@ -1,4 +1,7 @@
 
+# defualt compiler unset
+define(COMPILER = "")
+
 # check whether user has Makevars file that might cause trouble
 makevars <- Sys.getenv("R_MAKEVARS_USER", unset = "~/.R/Makevars")
 if (file.exists(makevars)) {
@@ -24,11 +27,14 @@ if (file.exists(makevars)) {
 
 # Figure out the appropriate CXX prefix for the current
 # version of R + configuration.
-cxx <- NULL
+cxx <- "/usr/bin/c++"
 candidates <- c("CXX11", "CXX1X", "CXX")
 for (candidate in candidates) {
    value <- r_cmd_config(candidate)
    if (!is.null(value)) {
+      if (any(grepl("icpc", value))) {
+         define(COMPILER = "icc")
+      }
       cxx <- candidate
       break
    }
@@ -49,6 +55,7 @@ if (broken)
 # there as opposed to the bundled version
 cppflags <- read_r_config("CPPFLAGS", envir = NULL)[[1]]
 cppflags <- sub("(?: )?-I/usr/local/include", "", cppflags)
+cppflags <- sub("(?: )?-I/opt/homebrew/include", "", cppflags)
 
 # define the set of flags appropriate to the current
 # configuration of R
@@ -115,7 +122,6 @@ if (getRversion() < "4.0") {
 }
 
 # on Solaris, check if we're using gcc or g++
-define(COMPILER = "")
 if (Sys.info()[["sysname"]] == "SunOS") {
    cxx <- r_cmd_config("CXX")
    version <- system(paste(cxx, "--version"), intern = TRUE)
