@@ -1,7 +1,7 @@
 Package: RcppParallel
 Type: Package
 Title: Parallel Programming Tools for 'Rcpp'
-Version: 5.1.7
+Version: 5.1.8
 Authors@R: c(
     person("JJ", "Allaire", role = c("aut"), email = "jj@rstudio.com"),
     person("Romain", "Francois", role = c("aut", "cph")),
@@ -34,7 +34,7 @@ Biarch: TRUE
 RoxygenNote: 7.1.1
 Encoding: UTF-8
 NeedsCompilation: yes
-Packaged: 2023-02-27 19:15:41 UTC; kevin
+Packaged: 2024-07-06 03:39:53 UTC; kevin
 Author: JJ Allaire [aut],
   Romain Francois [aut, cph],
   Kevin Ushey [aut, cre],
@@ -48,4 +48,4 @@ Author: JJ Allaire [aut],
   Microsoft [cph]
 Maintainer: Kevin Ushey <kevin@rstudio.com>
 Repository: CRAN
-Date/Publication: 2023-02-27 21:02:40 UTC
+Date/Publication: 2024-07-06 16:02:02 UTC

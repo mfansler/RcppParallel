@@ -1,4 +1,8 @@
 
+## RcppParallel 5.1.8
+
+* RcppParallel now explicitly links to the bundled copy of TBB on macOS. (#206; @jeroen)
+
 ## RcppParallel 5.1.7
 
 * Remove deprecated `std::iterator`. (#192; @Enchufa2)
