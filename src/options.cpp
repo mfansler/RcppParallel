@@ -1,4 +1,6 @@
 
+#define NOMINMAX
+
 #include <RcppParallel.h>
 
 #include <Rinternals.h>
