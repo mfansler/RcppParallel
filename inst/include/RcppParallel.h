@@ -2,6 +2,10 @@
 #ifndef __RCPP_PARALLEL__
 #define __RCPP_PARALLEL__
 
+#if defined(WINNT) && defined(__clang__)
+# define NOMINMAX
+#endif
+
 // TinyThread implementation
 #include "RcppParallel/TinyThread.h"
 
