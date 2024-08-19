@@ -1,6 +1,6 @@
-8d49e37413c9ceff10b7b68c61d1148e *DESCRIPTION
+39d64cef5d868b8d2d766b952b83ac21 *DESCRIPTION
 ac5bf58d5c93a8009b0a3b8ae1ecabba *NAMESPACE
-6e482aeef25c4f6c85d4cf2b533384d7 *NEWS.md
+8cc939e0d78b665bc39c0c2679de1d5a *NEWS.md
 4939bb891c20f17804b6d352c57c11d8 *R/RcppParallel-package.R
 a3ac253c981edd6f2fa1cb6d9b90490a *R/aaa.R
 ad95444db7d259f4cd137668e99a392a *R/flags.R
@@ -9,7 +9,7 @@ a52fbb13d023a4e7734614c4698ae429 *R/platform.R
 1c06fa524c66c810adbab9efe26c060f *R/plugin.R
 148fc9eef5063068c75935b38c128805 *R/skeleton.R
 95700bee90564fe5b0a581b43af2fe04 *R/tbb-autodetected.R.in
-50758bf4470b1b4e46f785d67ba38921 *R/tbb.R
+00ade5a9c272a702a8f6adbf53e8011c *R/tbb.R
 d5af5bf25901f8d7dadeab9c6e18eadb *R/utils.R
 2806b33717b906f8140c8c7d89869e18 *R/zzz.R
 38ba0348cef0ac8408c22acb51d50d83 *cleanup
@@ -48,7 +48,7 @@ c9898639195af880de82891fa2712b00 *man/RcppParallel.package.skeleton.Rd
 d440867dddd5b3b7aadd690fb404b7a4 *man/flags.Rd
 198117b96fc23ea6a6a1c5a81c7c9a5b *man/setThreadOptions.Rd
 b350d5e8cdc06cef519240e85f81b78f *man/tbbLibraryPath.Rd
-9cff67e96300015e460f39a551c9bd78 *src/Makevars.in
+092d2113a314c19cb852599963524514 *src/Makevars.in
 045a4820dd01a1a7dcaef8fd86b733af *src/init.cpp
 e69672bb4874a75c45ba99b8abd1cbe5 *src/install.libs.R.in
 9c48669d14f38146b870211c0735b2e7 *src/options.cpp
@@ -643,4 +643,4 @@ e253d1de439b0281a1e4347eb474be46 *src/tbb/src/test/test_tuple.cpp
 1a8426b5179086121692fac0922ad991 *tests/doRUnit.R
 447c8872e235f31a7428d4b6aa724a0e *tools/config.R
 c0e27be8b679d4f96d7d09d6d46e07b4 *tools/config/cleanup.R
-7f03a0026cd3ff603049eff9b3762279 *tools/config/configure.R
+d57dbaaa894c9e9640685981bd82695e *tools/config/configure.R
