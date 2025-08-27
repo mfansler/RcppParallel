@@ -5,6 +5,11 @@
 #include <cstddef>
 #include <cstdlib>
 
+#include <algorithm>
+#include <memory>
+#include <functional>
+#include <utility>
+
 namespace RcppParallel {
 
 template <typename T, typename U>

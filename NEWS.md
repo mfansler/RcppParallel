@@ -1,4 +1,8 @@
 
+## RcppParallel 5.1.11
+
+* Compatibility with LLVM 21.
+
 ## RcppParallel 5.1.10
 
 * Fixed an issue where packages linking to RcppParallel could inadverently

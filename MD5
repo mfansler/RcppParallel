@@ -1,6 +1,6 @@
-2940d53a6aa75156f743508ef9481a0a *DESCRIPTION
+ce3e7a141e7c983b063e4fc1ee22b191 *DESCRIPTION
 ac5bf58d5c93a8009b0a3b8ae1ecabba *NAMESPACE
-e30dd714333a1f33baca986cc2e68490 *NEWS.md
+60325e9b96f95fbb2922ea7fe0dd79bc *NEWS.md
 4939bb891c20f17804b6d352c57c11d8 *R/RcppParallel-package.R
 a3ac253c981edd6f2fa1cb6d9b90490a *R/aaa.R
 5840541bf85bbc1a5cda5ee91b053b8c *R/flags.R
@@ -18,10 +18,10 @@ e890112877abbbe5071b3bd3fb711d7a *configure
 eabcad63d8b0a123cfa5594db25a6074 *configure.win
 42b0c04465e92560c2115fda3b330641 *inst/include/RcppParallel.h
 a6c056a4c7e284fb4a0258a525669340 *inst/include/RcppParallel/Backend.h
-ac56df57773b7a0cb486e3c1f4ee750c *inst/include/RcppParallel/Common.h
+e55235d77e3025bc577abd97d0756bf2 *inst/include/RcppParallel/Common.h
 bdd2f294b6f0cbd436617eb4df15401e *inst/include/RcppParallel/RMatrix.h
 7b0de08055d8aa0b21de7a1260083041 *inst/include/RcppParallel/RVector.h
-b90c6ff48f74a501d83c09b49dfb792e *inst/include/RcppParallel/TBB.h
+e537a5f4aa80e96da320e173e791f39f *inst/include/RcppParallel/TBB.h
 804a6a70a3eefef66c5700bd0fbbfe9b *inst/include/RcppParallel/Timer.h
 8a02a105057ddfd80fd9e3916d4d96dc *inst/include/RcppParallel/TinyThread.h
 36a8c5ad8e670d6c23f41c480b437b56 *inst/include/tthread/fast_mutex.h
@@ -51,8 +51,8 @@ b350d5e8cdc06cef519240e85f81b78f *man/tbbLibraryPath.Rd
 6fede758b0da52a3302e2731e35e6655 *src/Makevars.in
 045a4820dd01a1a7dcaef8fd86b733af *src/init.cpp
 e69672bb4874a75c45ba99b8abd1cbe5 *src/install.libs.R.in
-9c48669d14f38146b870211c0735b2e7 *src/options.cpp
-379971a977a261fce5ed365331d92bc6 *src/tbb.cpp
+426adec0faacae91154aaf31070e48bc *src/options.cpp
+bd642660635b7ac9f2fd7659063da240 *src/tbb.cpp
 071898d575026ef4372aefb6397b972c *src/tbb/CHANGES
 86d3f3a95c324c9479bd8986968f4327 *src/tbb/COPYING
 2ce5ccb08b9241779b00daa1bc9527c4 *src/tbb/Doxyfile
@@ -245,7 +245,7 @@ f695403ace72c8a47dc29652ee5fddd8 *src/tbb/include/tbb/runtime_loader.h
 b8659493818dcc3865043f1fbb0e5890 *src/tbb/include/tbb/scalable_allocator.h
 76fdaa55c991a4d5bcdd20e816c4edd0 *src/tbb/include/tbb/spin_mutex.h
 5c734b9b080b0aa64c004f7eeb5a0a7a *src/tbb/include/tbb/spin_rw_mutex.h
-1d643fc517a95e564ae269c536e8972d *src/tbb/include/tbb/task.h
+d257bf79ee5250b39d4899da11c4eb16 *src/tbb/include/tbb/task.h
 5ffc1ef9ec106461e362a17284942c0b *src/tbb/include/tbb/task_arena.h
 f06a5dbac72c100ccb622d543926a91d *src/tbb/include/tbb/task_group.h
 ffd12e342ce2f7a2230fcb9a3dd263db *src/tbb/include/tbb/task_scheduler_init.h

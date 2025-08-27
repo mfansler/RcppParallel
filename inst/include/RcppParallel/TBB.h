@@ -7,9 +7,7 @@
 # define TBB_PREVIEW_GLOBAL_CONTROL 1
 #endif
 
-#include <tbb/tbb.h>
-#include <tbb/global_control.h>
-#include <tbb/scalable_allocator.h>
+#include "tbb/tbb.h"
 
 namespace RcppParallel {
 
