@@ -1,4 +1,4 @@
-ce3e7a141e7c983b063e4fc1ee22b191 *DESCRIPTION
+5fdf9d8ab40338729645640b095095c7 *DESCRIPTION
 ac5bf58d5c93a8009b0a3b8ae1ecabba *NAMESPACE
 60325e9b96f95fbb2922ea7fe0dd79bc *NEWS.md
 4939bb891c20f17804b6d352c57c11d8 *R/RcppParallel-package.R
@@ -21,7 +21,7 @@ a6c056a4c7e284fb4a0258a525669340 *inst/include/RcppParallel/Backend.h
 e55235d77e3025bc577abd97d0756bf2 *inst/include/RcppParallel/Common.h
 bdd2f294b6f0cbd436617eb4df15401e *inst/include/RcppParallel/RMatrix.h
 7b0de08055d8aa0b21de7a1260083041 *inst/include/RcppParallel/RVector.h
-e537a5f4aa80e96da320e173e791f39f *inst/include/RcppParallel/TBB.h
+879ec29ccb468086d361533e0037aec2 *inst/include/RcppParallel/TBB.h
 804a6a70a3eefef66c5700bd0fbbfe9b *inst/include/RcppParallel/Timer.h
 8a02a105057ddfd80fd9e3916d4d96dc *inst/include/RcppParallel/TinyThread.h
 36a8c5ad8e670d6c23f41c480b437b56 *inst/include/tthread/fast_mutex.h
